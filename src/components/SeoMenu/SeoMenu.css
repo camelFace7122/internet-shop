@@ -10,7 +10,7 @@
     font-size: 22px;
 }
 
-.seoMenu .PrivateTabIndicator-root-2 {
+.seoMenu .MuiTabs-indicator {
     transition: none;
     display: none;
 }
@@ -37,7 +37,7 @@
     padding: 0 15px;
 }
 
-.seoMenu .makeStyles-root-1 {
+.seoMenu__title + div {
     width: auto;
     display: inline-block;
 }
