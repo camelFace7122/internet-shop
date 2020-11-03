@@ -1,0 +1,68 @@
+.wideCarousel {
+    background-color: #F5F5F5;
+}
+
+.wideCarousel__container {
+    padding-top: 104px;
+    padding-bottom: 104px;
+}
+
+/* .wideCarousel__item {
+} */
+
+.wideCarousel__image {
+    display: block;
+    height: 400px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+}
+
+.wideCarousel__image:hover .teaser_buy_link {
+    display: none;
+}
+
+.wideCarousel__image:hover .teaser_overlay::after {
+    opacity: 0.2;
+}
+
+.wideCarousel .slick-dots li button {
+    border-radius: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    outline: 0;
+    font-size: 0;
+    padding: 0;
+}
+
+.wideCarousel .slick-dots {
+    bottom: -35px;
+}
+
+.wideCarousel .slick-dots li button:before {
+    display: none;
+}
+
+.wideCarousel .slick-dots li button:hover {
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.wideCarousel .slick-dots li {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin: 0 7px;
+}
+
+.wideCarousel .slick-dots .slick-active button,
+.wideCarousel .slick-dots .slick-active button:hover {
+    background-color: #000;
+    opacity: 1;
+}

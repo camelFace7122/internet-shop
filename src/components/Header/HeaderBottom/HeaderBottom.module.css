@@ -1,0 +1,75 @@
+.header__bottom {
+    display: flex;
+    justify-content: space-between;
+    min-height: 90px;
+    align-items: center;
+    position: relative;
+}
+
+.header__bottom_genders_item {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-right: 20px;
+}
+
+.header__bottom_genders_item:last-child {
+    margin-right: 0;
+}
+
+.item_active {
+    border-bottom: 2px solid black;
+}
+
+.userNav__basketIcon {
+    display: inline-block;
+    background-image: url(./../../../assets/images/shop-basket.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    width: 35px;
+    height: 35px;
+}
+
+.header__logo {
+    display: inline-block;
+    background: url(./../../../assets/images/header__logo.svg) 0 0/cover;
+    width: 160px;
+    height: 32px;
+    position: absolute;
+    top: calc(50% - 16px);
+    right: calc(50% - 80px);
+}
+
+.userNav__item {
+    margin-right: 12px;
+    color: #888;
+    transition: color 0.2s linear;
+}
+
+.userNav__item:last-child {
+    margin-right: 0;
+}
+
+.userNav__item:hover {
+    color: #000;
+    cursor: pointer;
+}
+
+.userNav__basket {
+    color: #000;
+}
+
+.userNav__basket {
+    transition: none;
+    text-decoration: none;
+}
+
+.userNav__basketIcon {
+    vertical-align: -8px;
+}
+
+.userNav__basket:hover .userNav__basketIcon {
+    background-position: -35px 0px;
+}

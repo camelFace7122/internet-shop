@@ -1,0 +1,99 @@
+.seoMenu {
+    border-top: 1px solid #e5e5e5;
+}
+
+.seoMenu__title {
+    margin: 42px 0 14px;
+    padding: 0;
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.seoMenu .PrivateTabIndicator-root-2 {
+    transition: none;
+    display: none;
+}
+
+.seoMenu .MuiTabs-root {
+    min-height: auto;
+}
+
+.seoMenu .MuiPaper-elevation4 {
+    box-shadow: none;
+}
+
+.seoMenu .MuiButtonBase-root {
+    transition: all 0.3s ease;
+    border: 1px solid #888;
+    color: #888;
+    background-color: #ffffff;
+    height: 24px;
+    min-height: auto;
+    padding: 0;
+    line-height: 1;
+    text-transform: none;
+    font-size: 12px;
+    padding: 0 15px;
+}
+
+.seoMenu .makeStyles-root-1 {
+    width: auto;
+    display: inline-block;
+}
+
+.seoMenu .MuiAppBar-root {
+    width: auto;
+}
+
+.seoMenu .MuiTabs-scroller {
+    flex: 0 0 auto;
+}
+
+.seoMenu .MuiTabs-fixed {
+    width: auto;
+}
+    
+.seoMenu .MuiTab-root {
+    min-width: auto;
+    max-width: auto;
+    min-height: auto;
+    max-height: auto;
+}
+
+.seoMenu .MuiTab-fullWidth {
+    flex-grow: 0;
+    max-width: none;
+    flex-basis: auto;
+    flex-shrink: 0;
+}
+
+.seoMenu .MuiButtonBase-root + .MuiButtonBase-root {
+    margin-left: -1px;
+}
+
+.seoMenu .MuiButtonBase-root:first-child {
+    border-radius: 3px 0px 0px 3px;
+}
+
+.seoMenu .MuiButtonBase-root:last-child {
+    border-radius: 0px 3px 3px 0px;
+}
+
+.seoMenu .MuiButtonBase-root:hover {
+    color: #000;
+}
+
+.seoMenu .MuiButtonBase-root:hover.Mui-selected {
+    color: #ffffff;
+}
+.seoMenu .MuiButtonBase-root.Mui-selected {
+    color: #ffffff;
+}
+
+.seoMenu .MuiButtonBase-root.Mui-selected {
+    background-color: #000;
+}
+
+
+    

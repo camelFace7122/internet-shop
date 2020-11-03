@@ -1,0 +1,75 @@
+.knowMore__container {
+    padding-top: 37px;
+    padding-bottom: 70px;
+}
+
+.knowMore__title {
+    font-weight: normal;
+    font-size: 22px;
+    margin-top: 16px;
+    margin-bottom: 11px;
+    position: relative;
+}
+
+.knowMore__title span {
+    display: inline-block;
+}
+
+.knowMore__box {  
+    display: flex;
+    justify-content: space-between;
+}
+
+.knowMore__item {
+    max-width: 400px;
+    width: 100%;
+}
+
+.knowMore__item__container {
+    text-decoration: none;
+    color: #000;
+    text-align: left;
+}
+
+.knowMore__item + .knowMore__item {
+    margin-left: 18px;
+}
+
+.knowMore__item_image {
+    width: 100%;
+    height: 285px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.knowMore__item__container:hover .teaser_overlay::after {
+    opacity: 0.2;
+}
+
+.knowMore__item__container:hover .teaser_buy_link {
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    visibility: visible;
+}
+
+.knowMore__item_text {
+    margin-top: 20px;
+}
+
+.knowMore__item_title {
+    font-size: 22px;
+    margin: 0 0 12px;
+    font-weight: 500;
+}
+
+.knowMore__item_subtitle {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #888;
+    font-weight: 300;
+    margin: 0;
+}

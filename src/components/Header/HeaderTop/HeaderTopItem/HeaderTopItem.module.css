@@ -1,0 +1,24 @@
+.header__top_item img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.header__top_item {
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.header__top_item:hover {
+    background-color: #649bfa;
+    transition: all 0.1s ease-in;
+}
+
+.header__top_item_payment_time {
+    background-color: #fc5832;
+}

@@ -1,0 +1,249 @@
+.popular__title {
+    margin-top: 20px;
+    margin-bottom: 18px;
+    position: relative;
+    line-height: 18px;
+    font-size: 22px;
+    border-bottom: 0;
+}
+
+.swiper__container {
+    position: relative;
+}
+
+.swiper-button {
+    position: absolute;
+    top: 150px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .08);
+    height: 56px;
+    width: 56px;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    transition-property: background-color;
+    -webkit-transition: .2s ease .1s;
+    transition: .2s ease .1s;
+}
+
+.swiper-button:hover {
+    background-color: #2796ff;
+    cursor: pointer;
+}
+
+.swiper-button:hover:after {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+}
+
+.popular__swiper .swiper-button-prev {
+    left: -12px;
+    -webkit-transform: scaleX(-1) translateY(-50%);
+    transform: scaleX(-1) translateY(-50%);
+}
+
+.popular__swiper .swiper-button-next {
+    right: -12px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+.popular__swiper .swiper-button-next:after,
+.popular__swiper .swiper-button-prev:after {
+    content: '';
+    background: url('./../../assets/images/arrow-right.svg') 0 0/cover no-repeat;
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-transition-property: -webkit-filter;
+    transition-property: filter, -webkit-filter;
+    -webkit-transition: .2s ease .1s;
+    transition: .2s ease .1s;
+}
+
+.popular__slide {
+    margin-bottom: 10px;
+    margin: 0px 4px 10px;
+}
+
+.popular__slide:hover {
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, .08);
+}
+
+.popular__item_card {
+    background-color: #ffffff;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.popular__swiper {
+    position: relative;
+    padding: 8px;
+    margin-left: -12px;
+    width: 100%;
+}
+
+.popular__marks {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    display: -webkit-inline-box;
+    display: inline-flex;
+    background-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popular__marks_container {
+    -webkit-transform: skew(-7deg);
+    transform: skew(-7deg);
+    position: relative;
+    left: -2px;
+    background-color: #000;
+    display: flex;
+    font-size: 11px;
+}
+
+.popular__item_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.popular__item_image_wrapper {
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popular__item_look {
+    height: 100%;
+    position: relative;
+}
+
+.popular__marks_item span {
+    padding: 0 6px;
+    -webkit-transform: skew(7deg);
+    transform: skew(7deg);
+    text-decoration: none;
+    color: #fff;
+}
+
+.popular__marks_premium {
+    background-color: #3c5064;
+}
+
+.popular__marks_discount {
+    background-color: #f93c00;
+}
+
+.popular__marks_new {
+    background-color: #a5d2a0;
+}
+
+.popular__item_availableSizes {
+    padding: 0 8px 8px;
+    margin-top: -15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular__slide:hover .popular__item_availableSizes {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popular__item_size {
+    color: #888;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 4px;
+    transition: all .2s linear;
+
+}
+
+.popular__item_size:hover {
+    color: #000;
+}
+
+.popular__item_description {
+    margin: 8px;
+    padding-bottom: 8px;
+}
+
+.popular__item_price {
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.popular__item_last_price {
+    text-decoration: line-through;
+    font-weight: lighter;
+    margin-right: 8px;
+}
+
+.popular__item_current_price {
+    font-weight: bold;
+}
+
+.popular__item_current_price.red-price {
+    color: #f93c00;
+}
+
+.popular__item_about {
+    font-size: 12.5px;
+}
+
+.popular__item_name {
+    color: #888;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+.popular__toFavourites {
+    background-image: url('./../../assets/images/heart_icon.svg');
+    width: 32px;
+    height: 32px;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: none;
+}
+
+.popular__toFavourites:hover {
+    background-image: url('./../../assets/images/heart_icon_hover.svg');
+    animation: heartbeat .2s infinite alternate ease-in;
+}
+
+.popular .swiper-button-disabled {
+    display: none;
+}

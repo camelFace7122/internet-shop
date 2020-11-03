@@ -1,0 +1,28 @@
+.main__teaser_long {
+    clear: both;
+    width: 100%;
+    display: block;
+    background-color: red;
+}
+
+.teaser_long:hover .teaser_buy_link {
+    visibility: visible;
+}
+
+.teaser_long:hover .teaser_overlay::after {
+    opacity: 0.2;
+}
+
+.teaser_long {
+    display: block;
+    height: 100%;
+    background-image: url('./../../../assets/images/teaser_long-photo1.webp');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main__teaser_long {
+    height: 160px;
+    margin-bottom: 65px;
+}

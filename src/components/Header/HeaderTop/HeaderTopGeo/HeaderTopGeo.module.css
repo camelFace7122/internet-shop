@@ -1,0 +1,51 @@
+@keyframes signal {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.header__top_geo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    position: relative;
+    max-width: 250px;
+    padding: 0 35px 0 5px;
+    height: 100%;
+}
+
+.header__top_geo:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 15px;
+    width: 16px;
+    height: 16px;
+    background-image: url('./../../../../assets/images/chevron-down.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.header__top_geo:hover {
+    background-color: #649bfa;
+    transition: all 0.1s ease-in;
+}
+
+.header__top_geo:hover .header__redDot {
+    animation-play-state: paused;
+    visibility: hidden;
+}
+
+.header__redDot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    animation: signal 1s infinite alternate;
+    margin-right: 5px;
+}

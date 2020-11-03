@@ -1,0 +1,19 @@
+.header__top {
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    height: 40px;
+    background-color: black;
+}
+
+.header__top_inner {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+}
