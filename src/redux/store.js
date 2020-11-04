@@ -5,7 +5,8 @@ import menuReducer from './reducers/menu-reducer/menu-reducer';
 import popularReducer from './reducers/popular-reducer/popular-reducer';
 import actualReducer from './reducers/actual-reducer/actual-reducer';
 import knowMoreReducer from './reducers/knowMore-reducer/knowMore-reducer';
-import wideCarouselReducer from './reducers/wideCarousel-reducer/wideCarousel-reducer'
+import wideCarouselReducer from './reducers/wideCarousel-reducer/wideCarousel-reducer';
+import seoMenuReducer from './reducers/seoMenu-reducer/seoMenu-reducer';
 
 
 const reducers = combineReducers({
@@ -15,6 +16,7 @@ const reducers = combineReducers({
     actual: actualReducer,
     knowMore: knowMoreReducer,
     wideCarousel: wideCarouselReducer,
+    seoMenu: seoMenuReducer,
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -2,6 +2,10 @@
     border-top: 1px solid #e5e5e5;
 }
 
+.seoMenu__container {
+    margin-bottom: 20px;
+}
+
 .seoMenu__title {
     margin: 42px 0 14px;
     padding: 0;
@@ -33,17 +37,14 @@
     padding: 0;
     line-height: 1;
     text-transform: none;
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 15px;
-}
-
-.seoMenu__title + div {
-    width: auto;
-    display: inline-block;
 }
 
 .seoMenu .MuiAppBar-root {
     width: auto;
+    margin-bottom: 23px;
+    background-color: #ffffff;
 }
 
 .seoMenu .MuiTabs-scroller {
@@ -89,11 +90,75 @@
 }
 .seoMenu .MuiButtonBase-root.Mui-selected {
     color: #ffffff;
-}
-
-.seoMenu .MuiButtonBase-root.Mui-selected {
     background-color: #000;
 }
+
+.seoTabContent__container .MuiBox-root {
+    padding: 0;
+}
+.seoTabContent__container .MuiButtonBase-root {
+    padding: 2px 0;
+    text-align: left;
+    width: 175px;
+    border: none;
+    line-height: 17px;
+    font-size: 11px;
+    height: auto;
+    font-weight: lighter;
+}
+.seoTabContent__container .MuiButtonBase-root.Mui-selected {
+    color: #000;
+    background-color: #fff;
+}
+.seoTabContent__container .MuiButtonBase-root:hover.Mui-selected {
+    color: #000;
+}
+.seoTabContent__container .MuiTabs-indicator {
+    display: block;
+    background-color: black;
+}
+.seoTabContent__container .MuiTab-wrapper {
+    display: inline-block;
+}
+
+.seoTabContent__container .MuiButtonBase-root + .MuiButtonBase-root {
+    margin-left: 0px;
+}
+
+.seoContent__box_col {
+    display: inline-block;
+    width: 190px;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.seoContent__box_link {
+    display: block;
+    text-decoration: none;
+    color: #888;
+    font-size: 11px;
+    line-height: 21px;
+    padding: 2 0px;
+}
+.seoContent__box_link:hover {
+    color: #000;
+}
+
+.seoContent__box_benefit_title {
+    margin: 13px 0 7px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.seoContent__box_benefit_description {
+    margin: 4px 0;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+
 
 
     
