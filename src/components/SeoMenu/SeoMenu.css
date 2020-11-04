@@ -136,7 +136,7 @@
     display: block;
     text-decoration: none;
     color: #888;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 21px;
     padding: 2 0px;
 }
@@ -149,12 +149,12 @@
     font-size: inherit;
     line-height: inherit;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .seoContent__box_benefit_description {
     margin: 4px 0;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 16px;
 }
 

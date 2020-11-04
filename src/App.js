@@ -8,6 +8,7 @@ import ActualSection from './components/ActualSection/ActualSection';
 import KnowMoreSection from './components/KnowMoreSection/KnowMoreSection';
 import WideCarousel from './components/WideCarousel/WideCarousel';
 import SeoMenu from './components/SeoMenu/SeoMenu';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <KnowMoreSection />
       <WideCarousel />
       <SeoMenu />
+      <Footer />
     </React.Fragment>
   );
 }

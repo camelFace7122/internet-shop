@@ -46,7 +46,13 @@ import knowMore4 from './../assets/images/know-more4.webp';
 import wideCarousel1 from './../assets/images/wide-carousel1.webp';
 import wideCarousel2 from './../assets/images/wide-carousel2.webp';
 
+
 let dataBase = {
+    footer: {
+        socialIcons: [
+            'fb', 'vk', 'tw', 'ok', 'yt', 'ig', 'mail'
+        ]
+    },
     seoTabs: [
         {
             tabName: 'Женщинам', 
@@ -1058,4 +1064,5 @@ export let womenKnowMoreItems = dataBase.women.knowMoreItems;
 export let womenWideCarouselItems = dataBase.women.wideCarouselItems;
 export let womenClothes = dataBase.women.clothes;
 export let seoTabs = dataBase.seoTabs;
+export let footer = dataBase.footer;
 export default dataBase;

@@ -1,0 +1,144 @@
+.footer {
+    border-top: 1px solid #E5E5E5;
+    padding-bottom: 40px;
+}
+
+.email-subscription {
+    text-align: center;
+    padding: 16px 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.email-subscription__title {
+    font-size: 16px;
+    line-height: 29px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.email-subscription__subtitle {
+    margin: 4px 0 12px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.email-subscription__conditions-link {
+    margin-left: 3px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #888;
+    transition: all .2s linear;
+}
+
+.email-subscription__conditions-link:hover {
+    color: #888;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.email-subscription__input {
+    width: 298px;
+    font-size: 13px;
+    height: 30px;
+    padding: 8px;
+}
+
+.email-subscription__button {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    padding: 0 16px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 32px;
+    line-height: 34px;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+    background-color: #2796FF;
+    width: 150px;
+}
+
+.email-subscription__button:hover {
+    background-color: #0060d2;
+}
+
+.footer__col-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px 10px 0;
+    text-decoration: none;
+    color: #888;
+    cursor: pointer;
+    transition: .2s linear;
+    transition-property: all;
+}
+
+.footer__social-fb {
+    background: url('./../../assets/images/socials/facebook.svg');
+}
+
+.footer__social-fb:hover {
+    background: url('./../../assets/images/socials/facebook_hover.svg');
+}
+
+.footer__social-vk {
+    background: url('./../../assets/images/socials/vk.svg');
+}
+
+.footer__social-vk:hover {
+    background: url('./../../assets/images/socials/vk_hover.svg');
+}
+
+.footer__social-tw {
+    background: url('./../../assets/images/socials/twitter.svg');
+}
+
+.footer__social-tw:hover {
+    background: url('./../../assets/images/socials/twitter_hover.svg');
+}
+
+.footer__social-ok {
+    background: url('./../../assets/images/socials/ok.svg');
+}
+
+.footer__social-ok:hover {
+    background: url('./../../assets/images/socials/ok_hover.svg');
+}
+
+.footer__social-yt {
+    background: url('./../../assets/images/socials/youtube.svg');
+}
+
+.footer__social-yt:hover {
+    background: url('./../../assets/images/socials/youtube_hover.svg');
+}
+
+.footer__social-ig {
+    background: url('./../../assets/images/socials/instagram.svg');
+}
+
+.footer__social-ig:hover {
+    background: url('./../../assets/images/socials/instagram_hover.svg');
+}
+
+.footer__social-mail {
+    background: url('./../../assets/images/socials/mail.svg');
+}
+
+.footer__social-mail:hover {
+    background: url('./../../assets/images/socials/mail_hover.svg');
+}
+
+
