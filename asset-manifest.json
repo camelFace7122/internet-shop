@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/internet-shop/static/css/main.536c5d8f.chunk.css",
-    "main.js": "/internet-shop/static/js/main.7a6da1fd.chunk.js",
-    "main.js.map": "/internet-shop/static/js/main.7a6da1fd.chunk.js.map",
-    "runtime-main.js": "/internet-shop/static/js/runtime-main.4eb6fa00.js",
-    "runtime-main.js.map": "/internet-shop/static/js/runtime-main.4eb6fa00.js.map",
+    "main.css": "/internet-shop/static/css/main.14095c84.chunk.css",
+    "main.js": "/internet-shop/static/js/main.5e4c12d8.chunk.js",
+    "main.js.map": "/internet-shop/static/js/main.5e4c12d8.chunk.js.map",
+    "runtime-main.js": "/internet-shop/static/js/runtime-main.3d44add9.js",
+    "runtime-main.js.map": "/internet-shop/static/js/runtime-main.3d44add9.js.map",
     "static/css/2.1f24e113.chunk.css": "/internet-shop/static/css/2.1f24e113.chunk.css",
-    "static/js/2.300574ef.chunk.js": "/internet-shop/static/js/2.300574ef.chunk.js",
-    "static/js/2.300574ef.chunk.js.map": "/internet-shop/static/js/2.300574ef.chunk.js.map",
-    "static/js/3.978b35c0.chunk.js": "/internet-shop/static/js/3.978b35c0.chunk.js",
-    "static/js/3.978b35c0.chunk.js.map": "/internet-shop/static/js/3.978b35c0.chunk.js.map",
+    "static/js/2.e83578c3.chunk.js": "/internet-shop/static/js/2.e83578c3.chunk.js",
+    "static/js/2.e83578c3.chunk.js.map": "/internet-shop/static/js/2.e83578c3.chunk.js.map",
+    "static/js/3.d72be5b6.chunk.js": "/internet-shop/static/js/3.d72be5b6.chunk.js",
+    "static/js/3.d72be5b6.chunk.js.map": "/internet-shop/static/js/3.d72be5b6.chunk.js.map",
     "index.html": "/internet-shop/index.html",
     "static/css/2.1f24e113.chunk.css.map": "/internet-shop/static/css/2.1f24e113.chunk.css.map",
-    "static/css/main.536c5d8f.chunk.css.map": "/internet-shop/static/css/main.536c5d8f.chunk.css.map",
-    "static/js/2.300574ef.chunk.js.LICENSE.txt": "/internet-shop/static/js/2.300574ef.chunk.js.LICENSE.txt",
+    "static/css/main.14095c84.chunk.css.map": "/internet-shop/static/css/main.14095c84.chunk.css.map",
+    "static/js/2.e83578c3.chunk.js.LICENSE.txt": "/internet-shop/static/js/2.e83578c3.chunk.js.LICENSE.txt",
     "static/media/index.css": "/internet-shop/static/media/CoFoSans-Regular.683316ea.woff2",
     "static/media/PopularSection.css": "/internet-shop/static/media/heart_icon_hover.00d59c30.svg",
     "static/media/HeaderBottom.module.css": "/internet-shop/static/media/header__logo.19e7d5b6.svg",
@@ -69,10 +69,10 @@
     "static/media/wide-carousel2.90883755.webp": "/internet-shop/static/media/wide-carousel2.90883755.webp"
   },
   "entrypoints": [
-    "static/js/runtime-main.4eb6fa00.js",
+    "static/js/runtime-main.3d44add9.js",
     "static/css/2.1f24e113.chunk.css",
-    "static/js/2.300574ef.chunk.js",
-    "static/css/main.536c5d8f.chunk.css",
-    "static/js/main.7a6da1fd.chunk.js"
+    "static/js/2.e83578c3.chunk.js",
+    "static/css/main.14095c84.chunk.css",
+    "static/js/main.5e4c12d8.chunk.js"
   ]
 }
