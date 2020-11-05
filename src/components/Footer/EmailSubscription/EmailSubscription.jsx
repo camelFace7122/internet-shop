@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './EmailSubscription.css';
+
 const EmailSubscription = (props) => {
     return (
         <div className="email-subscription">

@@ -3,73 +3,14 @@
     padding-bottom: 40px;
 }
 
-.email-subscription {
-    text-align: center;
-    padding: 16px 12px;
-    border-bottom: 1px solid #e5e5e5;
+.footer__columns {
+    padding: 40px 0 30px;
 }
 
-.email-subscription__title {
-    font-size: 16px;
-    line-height: 29px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-}
-
-.email-subscription__subtitle {
-    margin: 4px 0 12px;
-    font-size: 12px;
-    line-height: 16px;
-}
-
-.email-subscription__conditions-link {
-    margin-left: 3px;
-    text-decoration: none;
-    color: #000;
-    border-bottom: 1px solid #888;
-    transition: all .2s linear;
-}
-
-.email-subscription__conditions-link:hover {
-    color: #888;
-    border-bottom: 1px solid transparent;
-    padding-bottom: 2px;
-}
-
-.email-subscription__input {
-    width: 298px;
-    font-size: 13px;
-    height: 30px;
-    padding: 8px;
-}
-
-.email-subscription__button {
-    display: inline-block;
-    margin: 0 0 0 16px;
-    padding: 0 16px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-weight: 700;
-    height: 32px;
-    line-height: 34px;
-    text-decoration: none;
-    cursor: pointer;
-    vertical-align: middle;
-    border: 0;
-    box-sizing: border-box;
-    outline: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #fff;
-    background-color: #2796FF;
-    width: 150px;
-}
-
-.email-subscription__button:hover {
-    background-color: #0060d2;
+.footer__col-icons {
+    margin-bottom: 6px;
+    text-align: left;
+    will-change: transform;
 }
 
 .footer__col-icon {
@@ -85,60 +26,154 @@
     transition-property: all;
 }
 
-.footer__social-fb {
+.footer__icon-fb {
     background: url('./../../assets/images/socials/facebook.svg');
 }
 
-.footer__social-fb:hover {
+.footer__icon-fb:hover {
     background: url('./../../assets/images/socials/facebook_hover.svg');
 }
 
-.footer__social-vk {
+.footer__icon-vk {
     background: url('./../../assets/images/socials/vk.svg');
 }
 
-.footer__social-vk:hover {
+.footer__icon-vk:hover {
     background: url('./../../assets/images/socials/vk_hover.svg');
 }
 
-.footer__social-tw {
+.footer__icon-tw {
     background: url('./../../assets/images/socials/twitter.svg');
 }
 
-.footer__social-tw:hover {
+.footer__icon-tw:hover {
     background: url('./../../assets/images/socials/twitter_hover.svg');
 }
 
-.footer__social-ok {
+.footer__icon-ok {
     background: url('./../../assets/images/socials/ok.svg');
 }
 
-.footer__social-ok:hover {
+.footer__icon-ok:hover {
     background: url('./../../assets/images/socials/ok_hover.svg');
 }
 
-.footer__social-yt {
+.footer__icon-yt {
     background: url('./../../assets/images/socials/youtube.svg');
 }
 
-.footer__social-yt:hover {
+.footer__icon-yt:hover {
     background: url('./../../assets/images/socials/youtube_hover.svg');
 }
 
-.footer__social-ig {
+.footer__icon-ig {
     background: url('./../../assets/images/socials/instagram.svg');
 }
 
-.footer__social-ig:hover {
+.footer__icon-ig:hover {
     background: url('./../../assets/images/socials/instagram_hover.svg');
 }
 
-.footer__social-mail {
+.footer__icon-mail {
     background: url('./../../assets/images/socials/mail.svg');
 }
 
-.footer__social-mail:hover {
+.footer__icon-mail:hover {
     background: url('./../../assets/images/socials/mail_hover.svg');
 }
+
+.footer__icon-payment {
+
+}
+
+.footer__icon-mastercard {
+    background: url('./../../assets/images/payments/footer__icon-mastercard.svg');
+    width: 43px;
+    height: 35px;
+}
+
+.footer__icon-visa {
+    background: url('./../../assets/images/payments/footer__icon-visa.svg');
+    width: 49px;
+    height: 16px;
+}
+
+.footer__icon-paybox {
+    background: url('./../../assets/images/payments/footer__icon-paybox.svg') 0 0/80px 25px;
+    width: 80px;
+    height: 25px;
+}
+
+
+.footer__text {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.footer__link {
+    margin-left: 3px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #888;
+    transition: all .2s linear;
+}
+
+.footer__link:hover {
+    color: #888;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+}
+
+.footer__icon-appstore {
+    background: url('./../../assets/images/apps/footer__icon-appstore.svg');
+    width: 85px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.footer__icon-googleplay {
+    background: url('./../../assets/images/apps/footer__icon-googleplay.svg');
+    width: 85px;
+    height: 25px;
+}
+
+.footer__col-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.footer__col-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    line-height: 16px;
+    transition: color .2s ease;
+}
+.footer__col-link:hover {
+    color: #888;
+}
+
+.footer__col {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    margin-right: -3px;
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.footer__col-item {
+    margin: 2px 0;   
+}
+
+
+
+
 
 

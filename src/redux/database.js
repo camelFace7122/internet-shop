@@ -51,6 +51,21 @@ let dataBase = {
     footer: {
         socialIcons: [
             'fb', 'vk', 'tw', 'ok', 'yt', 'ig', 'mail'
+        ],
+        paymentIcons: [
+            'mastercard', 'visa', 'paybox'  
+        ],
+        appIcons: [
+            'appstore', 'googleplay'
+        ],
+        countryIcons: [
+            'kz'
+        ],
+        progress: [
+            'forbes-2013', 'forbes-2014', 'forbes-2015', 'awardkz-2015', 'awardkz-2013'
+        ],
+        partners: [
+            'kazpost'
         ]
     },
     seoTabs: [

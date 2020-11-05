@@ -2,19 +2,36 @@ import React from 'react';
 import {connect} from 'react-redux';
 import cn from 'classnames';
 
-const FooterColumnIcon = ({icon}) => {
+const FooterColumnIcon = ({socialIcon, paymentIcon, appIcon}) => {
     return (
-        <a href="/" target="_blank" className={cn('footer__col-icon', `footer__social-${icon}`)}></a>
+        <>
+            {
+                (socialIcon || appIcon) &&
+                <a href="/" target="_blank" className={cn('footer__col-icon', `footer__icon-${socialIcon || appIcon}`)}></a>
+                || 
+                paymentIcon &&
+                <i className={cn('footer__col-icon', 'footer__icon-payment' ,`footer__icon-${paymentIcon}`)}></i>
+            }
+        </>
     )
 }
 
 const FooterColumns = ({footer}) => {
-    let socialIcons = footer.socialIcons.map(icon => {
-        return <FooterColumnIcon icon={icon} />
+    
+    let socialIcons = footer.socialIcons.map(social => {
+        return <FooterColumnIcon socialIcon={social} />
+    })
+
+    let paymentIcons = footer.paymentIcons.map(payment => {
+        return <FooterColumnIcon paymentIcon={payment} />
+    })
+
+    let appIcons = footer.appIcons.map(app => {
+        return <FooterColumnIcon appIcon={app} />
     })
 
     return (
-        <div className="footer__columns">
+        <div className="footer__columns wrapper">
             <div className="footer__col">
                 <p className="footer__col-title">Помощь</p>
                 <div className="footer__col-item">
@@ -52,6 +69,32 @@ const FooterColumns = ({footer}) => {
                 <p className="footer__col-title">Мы в соцсетях</p>
                 <div className="footer__col-icons">
                     {socialIcons}
+                </div>
+                <p className="footer__col-title">Партнерам</p>
+                <div className="footer__col-item">
+                    <a href="/" className="footer__col-link">Подключиться к партнерской программе "Маркетплейс"</a>                
+                </div>
+            </div>
+            <div className="footer__col">
+                <p className="footer__col-title">Способы оплаты</p>
+                <div className="footer__col-icons">
+                    {paymentIcons}
+                </div>
+                <div className="footer__col-item footer__text">
+                    Вы можете оплатить покупки <br />
+                    наличными при получении, либо <br /> 
+                    выбрать <a href="/" className="footer__link">другой способ оплаты</a>.                
+                </div>
+            </div>
+
+            <div className="footer__col">
+                <p className="footer__col-title">Для мобильных устройств</p>
+                <div className="footer__col-icons">
+                    {appIcons}
+                </div>
+                <div className="footer__col-item footer__text">
+                    Вы также можете перейти <br />
+                    на <a href="/" className="footer__link">мобильную версию сайта</a>.                
                 </div>
             </div>
         </div>
