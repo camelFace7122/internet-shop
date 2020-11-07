@@ -5,7 +5,7 @@ import cn from 'classnames';
 import './FooterPartners.css';
 
 const FooterPartnersImage = ({progress, partner}) => {
-        return <i class={cn('footer__partners-image', {[`footer__partner-${partner}`]: partner}, {[`footer__progress-${progress}`]: progress} )}></i>
+        return <i className={cn('footer__partners-image', {[`footer__partner-${partner}`]: partner}, {[`footer__progress-${progress}`]: progress} )}></i>
 }
 
 const FooterPartners = ({progress, partners}) => {

@@ -1,0 +1,20 @@
+.auth-modal {
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1500;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.auth-modal__content {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: yellow;
+}
