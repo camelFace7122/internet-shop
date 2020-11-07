@@ -1,6 +1,6 @@
 {
   "name": "internet-shop",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://camelface7122.github.io/internet-shop",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
