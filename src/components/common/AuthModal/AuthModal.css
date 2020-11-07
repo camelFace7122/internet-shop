@@ -1,20 +1,156 @@
 .auth-modal {
     position: fixed;
     display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 1500;
-    overflow: hidden;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.35);
 }
 
 .auth-modal__content {
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 400px;
+    max-height: 100%;
     margin: 0 auto;
+    background-color: #ffff;
+    box-shadow: 0 2px 48px rgba(0,0,0,.24);
+    min-width: 480px;
+    max-width: calc(100% - 80px);
+    position: relative;
+}
+
+.auth-modal__header {
+    box-sizing: border-box;
+    color: #000;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: 24px 50px 8px 24px;
+}
+
+.auth-modal__header-title {
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.auth-modal-text {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-modal__body {
+    margin: auto 0;
+    overflow: auto;
+    padding: 24px;
+}
+
+.auth-modal__bySocials {
+    padding: 0 0 16px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 21px;
+}
+    
+.auth-modal__bySocials-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.auth-modal__bySocials-btn {
+    display: inline-block;
+    width: 48%;
+    height: 32px;
+    margin-bottom: 8px;
+    border: 0;
+    line-height: 32px;
+    border-radius: 3px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
     background-color: yellow;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+.auth-modal__bySocials-btn::before {
+    display: block;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    top: 0;
+    position: absolute;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.auth-modal__vk-btn::before {
+    background-image: url('./../../../assets/images/authorize-icons/byVk.svg');
+}
+
+.auth-modal__vk-btn {
+    background-color: #4c6c91;
+}
+
+.auth-modal__fb-btn::before {
+    background-image: url('./../../../assets/images/authorize-icons/byFb.svg');
+}
+
+.auth-modal__fb-btn { 
+    background-color: #385185;
+}
+
+.auth-modal__google-btn::before {
+    background-image: url('./../../../assets/images/authorize-icons/byGoogle.svg');
+}
+
+.auth-modal__google-btn {
+    background-color: #fff;
+    border: 1px solid #4285f4;
+    color: #4285f4;
+}
+
+.auth-modal__mailru-btn::before {
+    background-image: url('./../../../assets/images/authorize-icons/byMailru.svg');
+}
+
+.auth-modal__mailru-btn {
+    background-color: #168de2;
+}
+
+.auth-modal-link {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.auth-modal-link:hover {
+    color: #888;   
+}
+
+.modalCloseBtn {
+    cursor: pointer;
+    position: absolute;
+    right: -40px;
+    top: -8px;
+    z-index: 111000000;
+}
+
+.modalCloseBtn__icon {
+    background-image: url('./../../../assets//images/control-icons/closeIcon.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 40px;
+    height: 40px;
 }
