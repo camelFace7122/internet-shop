@@ -1,40 +1,32 @@
-import { authAPI } from '../../../api/api';
 import initialState from './header-state';
 
-const OPEN_AUTH_MODAL = 'auth/OPEN_AUTH_MODAL';
+export const RESET_INPUT = 'formReducer/RESET_INPUT';
+const SET_USER_GEO_DATA = 'headerReducer/SET_USER_GEO_DATA';
 
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
-        case OPEN_AUTH_MODAL: 
+        case SET_USER_GEO_DATA: 
             return {
                 ...state,
-                isAuthModalOpen: action.payload.isAuthModalOpen,
+                ...action.payload,
             }
         default: 
             return state;
     }
 }
 
-const openAuthModal = (isOpen) => {
+export const setUserGeoData = (geoData) => {
     return {
-        type: OPEN_AUTH_MODAL,
-        payload: { isAuthModalOpen: isOpen },
+        type: SET_USER_GEO_DATA,
+        payload: {userRegion: geoData.location},
     }
 }
 
-export const toggleAuthModal = (isOpen) => (dispatch) => {
-    if (isOpen) { 
-        document.documentElement.style.overflow = "hidden";
-        dispatch(openAuthModal(true));
-    } else {
-        document.documentElement.style.overflow = "";
-        dispatch(openAuthModal(false));
+export const resetInput = (field) => {
+    return {
+        type: RESET_INPUT,
+        field,
     }
-} 
-
-export const authorizeByEmail = ({email, password}) => async (dispatch) => {
-    let response = await authAPI.authorizeByEmail({email, password});
-    console.log(response);
 }
 
 export default headerReducer;

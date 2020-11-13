@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './AuthModal.css';
+import './CommonModal.css';
 
 const ModalCloseBtn = (props) => {
     return (

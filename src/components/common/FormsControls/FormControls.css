@@ -1,0 +1,74 @@
+.form__control {
+    display: block;
+    border: 1px solid #888;
+    position: relative;
+}   
+
+.form__control.focused {
+    border: 1px solid #2796ff;
+    box-shadow: 0 0 4px #2796ff;
+}
+
+.form__control.hasError {
+    border: 1px solid #c20000;
+    box-shadow: 0 0 4px #c20000;
+}
+
+.form__control-validation-error {
+    margin-top: 4px;
+    font-size: 11px;
+    color: #c20000;
+}
+
+.form__control-helpers {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+    
+.reset-input {
+    display: inline-block;
+    padding: 7px 8px 0;
+    border-left: none;
+    border-right: none;
+    -webkit-transition: border-color .2s linear;
+    transition: border-color .2s linear;
+    cursor: pointer;
+}
+
+.hide-password, .show-password {
+    display: inline-block;
+    padding: 2px 8px 0;
+    border-left: none;
+    border-right: none;
+    -webkit-transition: border-color .2s linear;
+    transition: border-color .2s linear;
+    cursor: pointer;
+}
+
+.reset-icon {
+    width: 16px;
+    height: 16px;
+    background-image: none;
+}
+
+.reset-icon.show-reset-icon {
+    background-image: url('./../../../assets/images/control-icons/reset-input.svg');
+}
+
+.passwordHider-icon{
+    width: 24px;
+    height: 20px;
+}
+
+.hide-password .passwordHider-icon {
+    background-image: url('./../../../assets/images/control-icons/hide-password.svg');
+}
+
+.show-password .passwordHider-icon {
+    background-image: url('./../../../assets/images/control-icons/show-password.svg');
+}
+    
+    

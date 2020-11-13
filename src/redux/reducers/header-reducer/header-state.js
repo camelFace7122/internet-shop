@@ -1,5 +1,5 @@
 let initialState = {
-    isAuthModalOpen: false,
+    userRegion: 'Атырау',
 }
 
 export default initialState;

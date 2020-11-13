@@ -1,25 +1,6 @@
-.auth-modal {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1500;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.35);
-}
-
 .auth-modal__content {
-    max-height: 100%;
-    margin: 0 auto;
-    background-color: #ffff;
-    box-shadow: 0 2px 48px rgba(0,0,0,.24);
     min-width: 480px;
     max-width: calc(100% - 80px);
-    position: relative;
 }
 
 .auth-modal__header {
@@ -28,7 +9,7 @@
     display: flex;
     flex-shrink: 0;
     font-size: 16px;
-    padding: 24px 50px 8px 24px;
+    padding: 24px 0px 8px 24px;
 }
 
 .auth-modal__header-title {
@@ -37,19 +18,10 @@
     font-weight: 700;
 }
 
-.auth-modal-text {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    padding-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .auth-modal__body {
     margin: auto 0;
     overflow: auto;
-    padding: 24px;
+    padding: 24px 35px 24px 24px;
 }
 
 .auth-modal__bySocials {
@@ -57,7 +29,7 @@
     border-bottom: 1px solid #e5e5e5;
     margin-bottom: 21px;
 }
-    
+
 .auth-modal__bySocials-links {
     display: flex;
     justify-content: space-between;
@@ -106,7 +78,7 @@
     background-image: url('./../../../assets/images/authorize-icons/byFb.svg');
 }
 
-.auth-modal__fb-btn { 
+.auth-modal__fb-btn {
     background-color: #385185;
 }
 
@@ -128,29 +100,66 @@
     background-color: #168de2;
 }
 
-.auth-modal-link {
+.auth-modal__form-field+.auth-modal__form-field {
+    margin: 16px 0;
+}
+
+.auth-modal__input {
+    box-sizing: border-box;
+    height: 30px;
+    min-width: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 12px 8px;
     color: #000;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    outline: 0;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    border: 0;
+    border-radius: 0;
 }
 
-.auth-modal-link:hover {
-    color: #888;   
+.auth-modal__form-submit {
+    display: flex;
+    align-items: center;
 }
 
-.modalCloseBtn {
+.auth-modal-submit {
+    width: 40%;
+    display: inline-block;
+    margin-right: 24px;
     cursor: pointer;
-    position: absolute;
-    right: -40px;
-    top: -8px;
-    z-index: 111000000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-width: 102px;
+    color: #fff;
+    border: 0;
+    background-color: #2796ff;
 }
 
-.modalCloseBtn__icon {
-    background-image: url('./../../../assets//images/control-icons/closeIcon.svg');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 40px;
-    height: 40px;
+.auth-modal-submit:hover {
+    background-color: #0060d2;
+}
+
+.auth-modal-submit[disabled] {
+    color: #888;
+    background: #e5e5e5;
+    cursor: default;
+}
+
+.auth-modal__form-submit .common-modal-text {
+    outline: none;
+    padding: 0;
 }

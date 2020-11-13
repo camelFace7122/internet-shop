@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './../HeaderBottom.module.css';
 import cn from 'classnames';
-import {toggleAuthModal} from './../../../../redux/reducers/header-reducer/header-reducer';
+import {toggleAuthModal} from './../../../../redux/reducers/widgets-reducer/widgets-reducer';
 import {connect} from 'react-redux';
 
 const UserNav = ({toggleAuthModal}) => {

@@ -1,0 +1,161 @@
+.region-modal {
+    overflow: visible;
+}
+
+.region-modal__geoselect {
+    position: relative;
+}
+
+.region-modal__content {
+    min-width: 480px;
+}
+
+.region-modal__header {
+    margin: 0;
+    padding: 24px 50px 8px 24px;
+    font-size: 22px;
+}
+
+.region-modal__body {
+    margin: auto 0;
+    overflow: auto;
+    padding: 24px 24px 0px;
+}
+
+.region-modal__input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.region-modal__dropdown {
+    border: 1px solid #d3d3d3;
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    border-top: none;
+    background-color: #ffffff;
+}
+
+.region-modal__dropdown.hide-dropdown {
+    height: 0;
+    overflow: hidden;
+}
+
+.region-modal__dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.region-modal__dropdown-list .common-modal-text {
+    padding: 8px 14px;
+}
+
+.region-modal__dropdown-list li:hover, .region-modal__dropdown-list li:focus {
+    background-color: #2796ff;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.region-modal__input {
+    font-size: 13px;
+    height: 34px;
+    padding: 8px;
+}
+
+.region-modal__geoselect .form__control {
+    border-radius: 3px;
+}
+
+.region-modal__geoselect {
+    margin-bottom: 18px;
+}
+
+.region-modal__autodefiner.common-modal-text {
+    margin-bottom: 18px;
+    padding: 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.region-modal__autodefiner {
+    display: inline-block;
+}
+
+.region-modal__pop-title.common-modal-text {
+    margin-bottom: 4px;
+    padding: 0px;
+    font-size: 12px;
+    color: #888;
+}
+
+.region-modal__pop-city {
+    font-size: 12px;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.region-modal__pop-city:hover {
+    cursor: pointer;
+}
+
+.region-modal__form {
+    min-width: 560px;
+}
+
+.region-modal__buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 0;
+}
+
+.region-modal__cancelBtn {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    color: #2796ff;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.region-modal__saveBtn {
+    border: 0;
+    outline: none;
+    background-color: #2796ff;;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    height: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+}
+
+.region-modal__cancelBtn:hover {
+    color: #0060d2;
+}
+
+.region-modal__saveBtn:hover {
+    background-color: #0060d2;
+}
+
+.region-modal__pop-cities {
+    min-height: 280px;
+}
+
+.region-modal__saveBtn[disabled] {
+    background-color: #e5e5e5;
+    color: #888;
+    pointer-events: none;
+}
+
