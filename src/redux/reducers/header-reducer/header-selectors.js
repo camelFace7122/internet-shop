@@ -14,4 +14,8 @@ export const getUserRegion = createSelector(getRegion, userRegion => {
     }
 })
 
+export const getRegionIsConfirmed = (state) => {
+    return state.header.regionIsConfirmed;
+}
+
 

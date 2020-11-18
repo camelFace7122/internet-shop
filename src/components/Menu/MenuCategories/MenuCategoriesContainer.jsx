@@ -6,11 +6,13 @@ let mstp = (state) => {
         womenList: state.menu.womenList,
         menList: state.menu.menList,
         kidsList: state.menu.kidsList,
+        itemIsHovered: state.menu.itemIsHovered,
     }
 }
 
 let mdtp = (dispatch) => {
-    return {};
+    return {
+    };
 }
 
 export default connect(mstp, mdtp)(MenuCategories)

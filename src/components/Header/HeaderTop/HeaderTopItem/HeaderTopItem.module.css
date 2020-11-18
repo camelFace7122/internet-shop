@@ -22,3 +22,13 @@
 .header__top_item_payment_time {
     background-color: #fc5832;
 }
+
+.headerTopItemTip {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    width: 278px;
+    padding: 20px 24px;
+    text-shadow: none;
+    text-align: left;
+}

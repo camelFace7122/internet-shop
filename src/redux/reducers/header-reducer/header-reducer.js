@@ -1,11 +1,14 @@
 import initialState from './header-state';
+import ReactDOM from 'react-dom';
 
 export const RESET_INPUT = 'formReducer/RESET_INPUT';
 const SET_USER_GEO_DATA = 'headerReducer/SET_USER_GEO_DATA';
+const CONFIRM_USER_REGION = 'headerReducer/CONFIRM_USER_REGION';
 
 const headerReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_USER_GEO_DATA: 
+        case SET_USER_GEO_DATA:
+        case CONFIRM_USER_REGION: 
             return {
                 ...state,
                 ...action.payload,
@@ -26,6 +29,13 @@ export const resetInput = (field) => {
     return {
         type: RESET_INPUT,
         field,
+    }
+}
+
+export const confirmUserRegion = () => {
+    return {
+        type: CONFIRM_USER_REGION,
+        payload: {regionIsConfirmed: true},
     }
 }
 

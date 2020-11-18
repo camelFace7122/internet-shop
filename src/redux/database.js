@@ -45,6 +45,12 @@ import knowMore3 from './../assets/images/know-more3.webp';
 import knowMore4 from './../assets/images/know-more4.webp';
 import wideCarousel1 from './../assets/images/wide-carousel1.webp';
 import wideCarousel2 from './../assets/images/wide-carousel2.webp';
+import dropdownBanner1 from './../assets/images/dropdownBanner1.webp';
+import dropdownBanner2 from './../assets/images/dropdownBanner2.webp';
+import dropdownBanner3 from './../assets/images/dropdownBanner3.webp';
+import dropdownBanner4 from './../assets/images/dropdownBanner4.webp';
+import dropdownBanner5 from './../assets/images/dropdownBanner5.webp';
+import dropdownBanner6 from './../assets/images/dropdownBanner6.webp';
 
 
 let dataBase = {
@@ -649,6 +655,738 @@ let dataBase = {
         }
     ],
     women: {
+        menuItems: [
+            {
+                content: 'Новинки', 
+                link: 'https://www.lamoda.kz/c/4153/default-women/?is_new=1&sitelink=topmenuW&l=1',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Одежда',
+                                links: [
+                                    'Блузы и рубашки',
+                                    'Брюки',
+                                    'Верхняя одежда',
+                                    'Джемперы, свитеры и кардиганы',
+                                    'Джинсы',
+                                    'Пиджаки и костюмы',
+                                    'Платья и сарафаны ',
+                                    'Толстовки и свитшоты',
+                                    'Футболки и поло',
+                                    'Юбки',
+                                    'Одежда больших размеров',
+                                    'все категории',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Обувь',
+                                links: [
+                                    'Ботильоны',
+                                    'Ботинки',
+                                    'Казаки',
+                                    'Кроссовки и кеды',
+                                    'Резиновая обувь',
+                                    'Сапоги',
+                                    'Слипоны',
+                                    'Туфли',
+                                    'все категории',
+                                ],
+                                config: [9],
+                            },
+                            {
+                                heading: 'Аксессуары',
+                                links: [
+                                    'Головные уборы',
+                                    'Зонты',
+                                    'Косметички',
+                                    'Кошельки и визитницы',
+                                    'Очки',
+                                    'Перчатки и варежки',
+                                    'Платки и шарфы',
+                                    'Ремни и пояса',
+                                    'Рюкзаки',
+                                    'Сумки',
+                                    'Украшения',
+                                    'все категории',
+                                    'Premium',
+                                    'Спорт',
+                                    'Красота',
+                                ],
+                                config: [12, 3],
+                            }
+                        ],
+                    },
+                ],
+            }, 
+            {
+                content: 'Одежда', 
+                link: 'https://www.lamoda.kz/c/355/clothes-zhenskaya-odezhda/?sitelink=topmenuW&l=2',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Категории',
+                                links: [
+                                    'Новинки',
+                                    'Блузы и рубашки',
+                                    'Вязанные костюмы',
+                                    'Брюки',
+                                    'Верхняя одежда',
+                                    'Джемперы, свитеры и кардиганы',
+                                    'Джинсы',
+                                    'Домашняя одежда',
+                                    'Комбинезоны',
+                                    'Купальники и пляжная одежда',
+                                    'Нижнее белье',
+                                    'Носки, чулки и колготки',
+                                    'Пиджаки и костюмы',
+                                    'Платья и сарафаны',
+                                    'Спортивные костюмы',
+                                    'Толстовки и олимпийки',
+                                    'Топы и майки',
+                                    'Туники',
+                                    'Футболки и поло',
+                                    'Шорты',
+                                    'Юбки',
+                                    'Одежда больших размеров',
+                                    'Одежда для беременных',
+                                    'все категории'
+                                ],
+                                config: [12, 12],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'Befree',
+                                    'Dorothy Perkins',
+                                    'Gap',
+                                    'Levi\'s®',
+                                    'mango',
+                                    'oodji',
+                                    'Sela',
+                                    'Tommy Hilfighter',
+                                    'Topshop',
+                                    'United Colors of Benetton',
+                                    'Zarina',
+                                    'все бренды',
+                                ],
+                                config: [12],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner1,
+                            title: 'Новинки одежды',
+                            subtitle: 'Осенние коллекции'
+                        }
+                    }    
+                ]
+                
+            }, 
+            {
+                content: 'Обувь', 
+                link: 'https://www.lamoda.kz/c/15/shoes-women/?sitelink=topmenuW&l=3',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Категории',
+                                links: [
+                                    'Новинки',
+                                    'Балетки',
+                                    'Босоножки',
+                                    'Ботильоны',
+                                    'Ботинки',
+                                    'Ботфорты',
+                                    'Домашняя обувь',
+                                    'Дутики',
+                                    'Казаки',
+                                    'Кроссовки и кеды',
+                                    'Мокасины и топсайдеры',
+                                    'Полусапоги',
+                                    'Резиновая обувь',
+                                    'Сабо и мюли',
+                                    'Сандалии',
+                                    'Сапоги',
+                                    'Сланцы',
+                                    'Слипоны',
+                                    'Туфли',
+                                    'Угги и унты',
+                                    'Уход за обувью',
+                                    'Эспадрильи',
+                                    'Обувь с увеличенной полнотой',
+                                    'все категории'
+                                ],
+                                config: [13, 11],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'Betsy',
+                                    'Crocs',
+                                    'Geox',
+                                    'Keddo',
+                                    'New Balance',
+                                    'Nike',
+                                    'Patrol',
+                                    'Tamaris',
+                                    'Tommy Hilfiger',
+                                    'Vagabond',
+                                    'Vans',
+                                    'все бренды',
+                                ],
+                                config: [12],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner2,
+                            title: 'Обувь',
+                            subtitle: 'Новые коллекции'
+                        }
+                    }
+                ]   
+            }, 
+            {
+                content: 'Аксессуары', 
+                link: 'https://www.lamoda.kz/c/557/accs-zhenskieaksessuary/?sitelink=topmenuW&l=4',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Категории',
+                                links: [
+                                    'Новинки',
+                                    'Аксессуары для волос',
+                                    'Головные уборы',
+                                    'Зонты',
+                                    'Канцелярские товары',
+                                    'Ключницы и брелоки',
+                                    'Косметички',
+                                    'Кошельки и визитницы',
+                                    'Обложки для документов',
+                                    'Очки',
+                                    'Перчатки и варежки',
+                                    'Платки и шарфы',
+                                    'Ремни и пояса',
+                                    'Рюкзаки',
+                                    'Сумки',
+                                    'Украшения',
+                                    'Чемоданы и дорожные сумки',
+                                    'Чехлы для телефона и ноутбука',
+                                    'Ювелирные изделия',
+                                    'Все категории',
+                                ],
+                                config: [12, 8],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'David Jones',
+                                    'Dorothy Perkins',
+                                    'Fabretti',
+                                    'Guess',
+                                    'Mango',
+                                    'Ors Oro',
+                                    'River Island',
+                                    'Tommy Hilfiger',
+                                    'Topshop',
+                                    'United Colors of Benetton',
+                                    'все бренды',
+                                ],
+                                config: [11],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner3,
+                            title: 'Новые коллекции',
+                            subtitle: 'Аксессуары на осень'
+                        }
+                    }   
+                ]
+            },
+            {
+                content: 'Бренды', 
+                link: 'https://www.lamoda.kz/brands/?genders=women&sitelink=topmenuW&l=5',
+                tabs: [
+                    {
+                        tabLabel: 'Все бренды',
+                        sections: [
+                            {
+                                links: [
+                                    'adidas',
+                                    'Baon',
+                                    'Befree',
+                                    'Betsy',
+                                    'Caprice',
+                                    'Dorothy Perkins',
+                                    'Gap',
+                                    'Keddo',
+                                    'Koton',
+                                    'Lacoste',
+                                    'Levi\'s®',
+                                    'LOST INK',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                links: [
+                                    'Love Republic',
+                                    'Mango',
+                                    'New balance',
+                                    'Nike',
+                                    'Only',
+                                    'oodji',
+                                    'Patrol',
+                                    'PUMA',
+                                    'River Island',
+                                    'Roxy',
+                                    'Savage',
+                                    'Sela',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                links: [
+                                    'Tamaris',
+                                    'Tom Tailor',
+                                    'Tommy Hilfiger',
+                                    'Topshop',
+                                    'United Colors of Benetton',
+                                    'Vagabond',
+                                    'Vans',
+                                    'Vero Moda',
+                                    'Vis-a-Vis',
+                                    'Zarina',
+                                    'все бренды',
+                                ],
+                                config: [12],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner4,
+                        }
+                    },
+                    {
+                        tabLabel: 'Premium',
+                        sections: [
+                            {
+                                links: [
+                                    'Ash',
+                                    'Baldinini',
+                                    'BOSS',
+                                    'Braccialini',
+                                    'Coach',
+                                    'DKNY',
+                                    'Dolce&Gabbana',
+                                    'Emporio Armani',
+                                    'Escada Sport',
+                                    'French Connection',
+                                    'Iceberg',
+                                    'Just Cavalli',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                links: [
+                                    'Karl Lagerfeld',
+                                    'Liu Jo',
+                                    'Love Moschino',
+                                    'Maaji',
+                                    'Marc Jacobs',
+                                    'Max Mara',
+                                    'Max&Co',
+                                    'Michael Michael Kors',
+                                    'Nando Muzi',
+                                    'Patrizia Pepe',
+                                    'Persona by Marina Rinaldi',
+                                    'Pinko',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                links: [
+                                    'Prada',
+                                    'Ralf Lauren',
+                                    'Red Valentino',
+                                    'See by Chloe',
+                                    'Ted Baker London',
+                                    'Tous',
+                                    'Trussardi Jeans',
+                                    'UGG',
+                                    'Versace',
+                                    'все бренды',
+                                ],
+                                config: [10],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner5,
+                        }
+                    },
+                ]
+
+            }, 
+            {
+                content: 'Premium', 
+                link: 'https://www.lamoda.kz/home-premium-women/?sitelink=topmenuW&l=6',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Одежда',
+                                links: [
+                                    'Новинки',
+                                    'Блузки и рубашки',
+                                    'Брюки',
+                                    'Верхняя одежда',
+                                    'Джемперы, свитеры и кардиганы',
+                                    'Джинсы',
+                                    'Нижнее белье',
+                                    'Платья и сарафаны',
+                                    'Толстовки и олимпийки',
+                                    'Футболки и поло',
+                                    'Юбки',
+                                    'все категории',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Обувь',
+                                links: [
+                                    'Новинки',
+                                    'Босоножки',
+                                    'Ботильоны',
+                                    'Ботинки',
+                                    'Казаки',
+                                    'Кроссовки и кеды',
+                                    'Резиновая обувь',
+                                    'Сабо и мюли',
+                                    'Сандалии',
+                                    'Сапоги',
+                                    'Туфли',
+                                    'все категории'
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Аксессуары',
+                                links: [
+                                    'Новинки',
+                                    'Головные уборы',
+                                    'Зонты',
+                                    'Косметички',
+                                    'Кошельки и визитницы',
+                                    'Очки',
+                                    'Перчатки и варежки',
+                                    'Платки и шарфы',
+                                    'Ремни',
+                                    'Рюкзаки',
+                                    'Сумки',
+                                    'все категории'
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'Ash',
+                                    'Baldinini',
+                                    'BOSS',
+                                    'DKNY',
+                                    'Dolce&Gabbana',
+                                    'Emporio Armani',
+                                    'French Connection',
+                                    'Karl Lagerfeld',
+                                    'Liu Jo',
+                                    'Love Moschino',
+                                    'Max&Co',
+                                    'Michael Michael Kors',
+                                    'Nando Muzi',
+                                    'Patrizia Pepe',
+                                    'Persona by Marina Rinaldi',
+                                    'Pinko',
+                                    'Polo Ralph Lauren',
+                                    'Red Valentino',
+                                    'Ted Baker London',
+                                    'Tous',
+                                    'Trussardi Jeans',
+                                    'UGG',
+                                    'Versace',
+                                    'все бренды',
+                                ],
+                                config: [12, 12],
+                            },
+                        ],
+                    }   
+                ]
+            }, 
+            {
+                content: 'Спорт', 
+                link: 'https://www.lamoda.kz/home-sport-women/?sitelink=topmenuW&l=7',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Виды спорта',
+                                links: [
+                                    'Баскетбол',
+                                    'Бег',
+                                    'Волейбол',
+                                    'Горные лыжи и сноуборд',
+                                    'Единоборства',
+                                    'Плавание',
+                                    'Танцы и йога',
+                                    'Теннис',
+                                    'Трекинг и туризм',
+                                    'Фитнес',
+                                    'Футбол',
+                                    'все виды спорта',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Спортивная одежда',
+                                links: [
+                                    'Новинки',
+                                    'Брюки',
+                                    'Верхняя одежда',
+                                    'Купальники и пляжная одежда',
+                                    'Носки и колготки',
+                                    'Платья и сарафаны',
+                                    'Спортивные костюмы',
+                                    'Толстовки и свитшоты',
+                                    'Топы и майки',
+                                    'Футболки и поло',
+                                    'Шорты',
+                                    'все категории'
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Спортивная обувь',
+                                links: [
+                                    'Новинки',
+                                    'Ботинки',
+                                    'Кеды',
+                                    'Кроссовки',
+                                    'Резиновая обувь',
+                                    'Сандалии',
+                                    'Сапоги',
+                                    'Слипоны',
+                                    'все категории',
+                                ],
+                                config: [9],
+                            },
+                            {
+                                heading: 'Спортивные аксессуары',
+                                links: [
+                                    'Новинки',
+                                    'Головные уборы',
+                                    'Перчатки и варежки',
+                                    'Платки и шарфы',
+                                    'Ремни и пояса',
+                                    'Рюкзаки',
+                                    'Сумки',
+                                    'Спортивный инвентарь',
+                                    'все категории',
+                                ],
+                                config: [9],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'adidas',
+                                    'ASICS',
+                                    'Helly Hansen',
+                                    'New Balance',
+                                    'Nike',
+                                    'PUMA',
+                                    'Reebok',
+                                    'ROXY',
+                                    'Skechers',
+                                    'Under Armour',
+                                    'Vans',
+                                    'все бренды',
+                                ],
+                                config: [12],
+                            },
+                        ],
+                    }   
+                ]
+            }, 
+            {
+                content: 'Красота', 
+                link: 'https://www.lamoda.kz/c/4308/default-krasotawoman/?sitelink=topmenuW&l=8',
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'КАТЕГОРИИ',
+                                links: [
+                                    'Для ванны и душа',
+                                    'Макияж',
+                                    'Маникюр и педикюр',
+                                    'Массажеры и аппараты',
+                                    'Парфюмерия',
+                                    'Солнцезащитные средства и автозагары',
+                                    'Укладка и окрашивание',
+                                    'Уход',
+                                    'Уход и косметика для детей',
+                                    'все категории',
+                                ],
+                                config: [10],
+                            },
+                            {
+                                heading: 'БРЕНДЫ',
+                                links: [
+                                    'БиоБьюти',
+                                    'Натуротерапия',
+                                    'ARS',
+                                    'Artdeco',
+                                    'CC Brow',
+                                    'Clinique',
+                                    'Concept',
+                                    'Garnier',
+                                    'Gezatone',
+                                    'Holika Holika',
+                                    'Isadora',
+                                    'KayPro',
+                                    'Kerasys',
+                                    'Sachajuan',
+                                    'Tangle Teezer',
+                                    'The Skin House',
+                                    'все бренды',
+                                ],
+
+                                config: [10, 7],
+                            },
+                        ],
+                        banner: {
+                            picture: dropdownBanner6,
+                            title: 'Уход за лицом',
+                            subtitle: 'Мягкая забота'
+                        }
+                    }
+                ]   
+            }, 
+            {
+                content: 'Дом', 
+                link: 'https://www.lamoda.kz/c/6647/home_accs-tovarydlyadoma/?sitelink=topmenuW&l=9',
+                tabs: [
+                    {empty: true},
+                ]
+            }, 
+            {
+                content: 'Made in KZ', 
+                link: 'https://www.lamoda.kz/c/355/clothes-zhenskaya-odezhda/?labels=29512&sitelink=topmenuW&l=10',
+                tabs: [
+                    {empty: true},
+                ]
+            }, 
+            {
+                content: 'Блог', 
+                link: 'https://www.lamoda.kz/blog/?sitelink=topmenuW&l=11',
+                tabs: [
+                    {empty: true},
+                ]
+            }, 
+            {
+                content: 'Sale%', 
+                link: 'https://www.lamoda.kz/c/4153/default-women/?is_sale=1&display_locations=outlet&sitelink=topmenuW&l=12', 
+                isRed: true,
+                tabs: [
+                    {
+                        sections: [
+                            {
+                                heading: 'Виды спорта',
+                                links: [
+                                    'Баскетбол',
+                                    'Бег',
+                                    'Волейбол',
+                                    'Горные лыжи и сноуборд',
+                                    'Единоборства',
+                                    'Плавание',
+                                    'Танцы и йога',
+                                    'Теннис',
+                                    'Трекинг и туризм',
+                                    'Фитнес',
+                                    'Футбол',
+                                    'все виды спорта',
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Спортивная одежда',
+                                links: [
+                                    'Новинки',
+                                    'Брюки',
+                                    'Верхняя одежда',
+                                    'Купальники и пляжная одежда',
+                                    'Носки и колготки',
+                                    'Платья и сарафаны',
+                                    'Спортивные костюмы',
+                                    'Толстовки и свитшоты',
+                                    'Топы и майки',
+                                    'Футболки и поло',
+                                    'Шорты',
+                                    'все категории'
+                                ],
+                                config: [12],
+                            },
+                            {
+                                heading: 'Спортивная обувь',
+                                links: [
+                                    'Новинки',
+                                    'Ботинки',
+                                    'Кеды',
+                                    'Кроссовки',
+                                    'Резиновая обувь',
+                                    'Сандалии',
+                                    'Сапоги',
+                                    'Слипоны',
+                                    'все категории',
+                                ],
+                                config: [9],
+                            },
+                            {
+                                heading: 'Спортивные аксессуары',
+                                links: [
+                                    'Новинки',
+                                    'Головные уборы',
+                                    'Перчатки и варежки',
+                                    'Платки и шарфы',
+                                    'Ремни и пояса',
+                                    'Рюкзаки',
+                                    'Сумки',
+                                    'Спортивный инвентарь',
+                                    'все категории',
+                                ],
+                                config: [9],
+                            },
+                            {
+                                heading: 'Бренды',
+                                links: [
+                                    'adidas',
+                                    'ASICS',
+                                    'Helly Hansen',
+                                    'New Balance',
+                                    'Nike',
+                                    'PUMA',
+                                    'Reebok',
+                                    'ROXY',
+                                    'Skechers',
+                                    'Under Armour',
+                                    'Vans',
+                                    'все бренды',
+                                ],
+                                config: [12],
+                            },
+                        ],
+                    }   
+                ]
+            }
+        ],
         teaserItems: {
             teaserItem1: {
                 picture: mainBannerImage1,
@@ -1105,6 +1843,7 @@ let dataBase = {
     }
 }
 
+export let womenMenuItems = dataBase.women.menuItems;
 export let womenTeaserItems = dataBase.women.teaserItems;
 export let womenKnowMoreItems = dataBase.women.knowMoreItems;
 export let womenWideCarouselItems = dataBase.women.wideCarouselItems;

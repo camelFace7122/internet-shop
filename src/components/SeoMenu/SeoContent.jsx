@@ -36,15 +36,3 @@ const SeoContent = ({links, config, benefits}) => {
 }
 
 export default SeoContent;
-
-// links;
-
-// links/10 = colCount;
-
-// for (i = 1, i <= colCount, i++) {
-//     return (
-//         divbox;
-//             links.filter( (i-1)*10 <= index < i*10 ).map()
-//         divbox;
-//     )
-// }
