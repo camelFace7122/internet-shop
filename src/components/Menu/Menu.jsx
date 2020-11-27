@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuCategoriesContainer from './MenuCategories/MenuCategoriesContainer';
+import MenuCategories from './MenuCategories/MenuCategories';
 import Search from './Search/Search';
 import cn from 'classnames';
 import MenuDropdown from './MenuCategories/MenuDropdown';
@@ -12,7 +12,7 @@ const Menu = ({itemIsHovered, tabs, showDropdownList}) => {
     return (
         <div className={'menu'}>
             <div className={cn('menu__container', 'wrapper')}>
-                <MenuCategoriesContainer />
+                <MenuCategories />
                 <Search />
             </div>
             {itemIsHovered && <MenuDropdown tabs={tabs} showDropdownList={showDropdownList} itemIsHovered={itemIsHovered} />}

@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { formValueSelector } from 'redux-form';
-import {compareFieldAndStateLocationValues} from './../../../utils/validators/validators';
+import {compareFieldAndStateLocationValues} from '../../../utils/validators/validators';
 
 // redux-form value selectors
 const AuthFormValueSelector = formValueSelector('auth');

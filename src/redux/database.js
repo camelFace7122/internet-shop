@@ -52,7 +52,6 @@ import dropdownBanner4 from './../assets/images/dropdownBanner4.webp';
 import dropdownBanner5 from './../assets/images/dropdownBanner5.webp';
 import dropdownBanner6 from './../assets/images/dropdownBanner6.webp';
 
-
 let dataBase = {
     geoLocations: {
         kz: [

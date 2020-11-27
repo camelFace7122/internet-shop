@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import TeaserOverlay from './../../common/TeaserOverlay/TeaserOverlay';
-import TabPanel from './../../common/MaterialUI/TabPanel';
+import TeaserOverlay from '../../common/TeaserOverlay/TeaserOverlay';
+import TabPanel from '../../common/MaterialUI/TabPanel';
 import { Tabs, Tab } from '@material-ui/core';
 
 const MenuDropdownColumns = ({sectionColumns, banner}) => {
