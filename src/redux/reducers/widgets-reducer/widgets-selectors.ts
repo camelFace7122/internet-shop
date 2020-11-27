@@ -1,29 +1,31 @@
 import { createSelector } from 'reselect';
 import { formValueSelector } from 'redux-form';
 import {compareFieldAndStateLocationValues} from '../../../utils/validators/validators';
+import { AppStateType } from '../../store';
+import { CountryLocationsType } from '../../../types/types';
 
 // redux-form value selectors
 const AuthFormValueSelector = formValueSelector('auth');
 const regionFormValueSelector = formValueSelector('region');
 //
 
-export const getIsAuthModalOpen = (state) => {
+export const getIsAuthModalOpen = (state: AppStateType): boolean => {
     return state.widgets.isAuthModalOpen;
 }
 
-export const getIsRegionModalOpen = (state) => {
+export const getIsRegionModalOpen = (state: AppStateType): boolean => {
     return state.widgets.isRegionModalOpen;
 }
 
-const getGeoLocationsKz = (state) => {
+const getGeoLocationsKz = (state: AppStateType): CountryLocationsType => {
     return state.widgets.geoLocations.kz;
 }
 
-const getRegionFormLocationFieldValue = (state) => {
+const getRegionFormLocationFieldValue = (state: AppStateType): string => {
     return regionFormValueSelector(state, 'location');
 }
 
-export const getLocationsMatchesKz = createSelector(getRegionFormLocationFieldValue, getGeoLocationsKz, (locationFieldValue, geoLocationsKz) => {
+export const getLocationsMatchesKz = createSelector<AppStateType, string, CountryLocationsType, CountryLocationsType | null | undefined>(getRegionFormLocationFieldValue, getGeoLocationsKz, (locationFieldValue, geoLocationsKz) => {
     if (locationFieldValue) {
         let filtredList = geoLocationsKz.filter(item => {
             return compareFieldAndStateLocationValues(item.locationName, locationFieldValue) || 
@@ -36,7 +38,7 @@ export const getLocationsMatchesKz = createSelector(getRegionFormLocationFieldVa
     }
 })
 
-export const getPopularLocationsKz = createSelector(getGeoLocationsKz, geoLocationsKz => {
+export const getPopularLocationsKz = createSelector<AppStateType, CountryLocationsType, CountryLocationsType>(getGeoLocationsKz, geoLocationsKz => {
     let sortedKzLocations = [...geoLocationsKz].sort((a, b) => {
         return b.residentsFrom - a.residentsFrom;
     })
@@ -51,6 +53,6 @@ export const getPopularLocationsKz = createSelector(getGeoLocationsKz, geoLocati
     });
 })
 
-export const getIsInputFocused = (state) => {
+export const getIsInputFocused = (state: AppStateType): boolean => {
     return state.widgets.isInputFocused;
 }

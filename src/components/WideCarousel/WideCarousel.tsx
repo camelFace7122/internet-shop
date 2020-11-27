@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { connect } from 'react-redux';
 import Slider from 'react-slick';
 import WideCarouselItem from './WideCarouselItem';
+import { WideCarouselItemsType } from '../../types/types';
 
 import './WideCarousel.css';
-import { connect } from 'react-redux';
+import { AppStateType } from '../../redux/store';
 
-const WideCarousel = ({women}) => {
+type PropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
+
+type MapStateToPropsType = {
+    women: WideCarouselItemsType
+}
+
+type MapDispatchToPropsType = {}
+
+type OwnPropsType = {}
+
+const WideCarousel: FC<PropsType> = ({women}) => {
     const settings = {
         dots: true,
         arrows: false,
@@ -30,13 +42,13 @@ const WideCarousel = ({women}) => {
     )
 }
 
-const mstp = (state) => {
+const mstp = (state: AppStateType) => {
     return {
         women: state.wideCarousel.women,
     }
 }
-const mdtp = (dispatch) => {
+const mdtp = (dispatch: any) => {
     return {}
 }
 
-export default connect(mstp, mdtp)(WideCarousel);
+export default connect<MapStateToPropsType, MapDispatchToPropsType, OwnPropsType, AppStateType>(mstp, mdtp)(WideCarousel);

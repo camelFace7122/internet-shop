@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import SeoContentTabsContainer from './SeoContentTabsContainer';
+import { SeoTabsType } from '../../types/types';
 
-function a11yProps(index) {
+type PropsType = {
+    seoMenuData: SeoTabsType
+}
+
+function a11yProps(index: number) {
     return {
         id: `full-width-tab-${index}`,
         'aria-controls': `full-width-tabpanel-${index}`,
@@ -20,11 +25,11 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function SeoMenuTabs({seoMenuData}) {
+const SeoMenuTabs: FC<PropsType> = ({seoMenuData}) => {
     const classes = useStyles();
     const [value, setValue] = React.useState(5);
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: ChangeEvent<Element | {}>, newValue: number) => {
         setValue(newValue);
     };
 

@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
-import { MenuListType } from '../../../types/types';
+import { MenuListItemTabsType, MenuListType } from '../../../types/types';
 import {womenMenuItems as WMI} from '../../database';
 
 let initialState = {
     itemIsHovered: false,
-    dropdownTabs: null as null | ReactNode,
+    dropdownTabs: null as null | MenuListItemTabsType | undefined,
     dropdownDelay: 500 as null | number,
     isDropdownOpen: false,
     womenList: [

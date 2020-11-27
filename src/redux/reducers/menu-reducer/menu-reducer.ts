@@ -4,7 +4,9 @@ import { SHOW_DROPDOWN_LIST } from '../../../types/constants';
 import { ReactNode } from 'react';
 import { MenuListItemTabsType } from '../../../types/types';
 
-const menuReducer = (state = initialState, action: any): InitialStateType => {
+type ActionsTypes = ShowDropdownListActionType
+
+const menuReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch(action.type) {
         case SHOW_DROPDOWN_LIST:
             return {
@@ -25,10 +27,10 @@ type ShowDropdownListActionType = {
 
 type ShowDropdownListActionPayloadType = {
     itemIsHovered: boolean,
-    dropdownTabs: MenuListItemTabsType | null
+    dropdownTabs?: MenuListItemTabsType | null
 }
 
-export const showDropdownList = (itemIsHovered: boolean, dropdownTabs: MenuListItemTabsType | null): ShowDropdownListActionType => {
+export const showDropdownList = (itemIsHovered: boolean, dropdownTabs?: MenuListItemTabsType | null): ShowDropdownListActionType => {
     return {
         type: SHOW_DROPDOWN_LIST,
         payload: {

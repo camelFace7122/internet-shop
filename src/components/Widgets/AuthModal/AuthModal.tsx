@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {connect} from 'react-redux';
-import { reduxForm } from 'redux-form';
-import { createField, EmailInput, FormError, PasswordInput } from './../../common/FormsControls/FormControls';
-import {toggleAuthModal} from './../../../redux/reducers/widgets-reducer/widgets-reducer';
-import {isEmail, minLength6, requiredEmail, requiredPassword} from './../../../utils/validators/validators';
-import CommonModal from './../../common/CommomModal/CommonModal';
+import { InjectedFormProps, reduxForm } from 'redux-form';
+import { createField, EmailInput, FormError, PasswordInput } from '../../common/FormsControls/FormControls';
+import {toggleAuthModal} from '../../../redux/reducers/widgets-reducer/widgets-reducer';
+import {isEmail, minLength6, requiredEmail, requiredPassword} from '../../../utils/validators/validators';
+import CommonModal from '../../common/CommomModal/CommonModal';
 
 import './AuthModal.css';
+import { AppStateType } from '../../../redux/store';
 
-const AuthModal = ({isAuthModalOpen, toggleAuthModal}) => {
+type AuthModalPropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
+
+type MapStateToPropsType = {
+    isAuthModalOpen: boolean
+}
+
+type MapDispatchToPropsType = {
+    toggleAuthModal: (isOpen: boolean) => void
+}
+
+type OwnPropsType = {}
+
+type AuthFormPropsType = InjectedFormProps
+
+const AuthModal: FC<AuthModalPropsType> = ({isAuthModalOpen, toggleAuthModal}) => {
 
     return <CommonModal isModalOpen={isAuthModalOpen} toggleModal={toggleAuthModal} mainClass={'auth-modal'}>
         <div className="auth-modal__header">
@@ -32,7 +47,7 @@ const AuthModal = ({isAuthModalOpen, toggleAuthModal}) => {
 
 };
 
-const AuthForm = ({handleSubmit, error, valid}) => {
+const AuthForm: FC<AuthFormPropsType> = ({handleSubmit, error, valid}) => {
 
     return <form onSubmit={handleSubmit}>
              <p className="common-modal-text">
@@ -54,10 +69,10 @@ const AuthForm = ({handleSubmit, error, valid}) => {
 
 const AuthReduxForm = reduxForm({form: 'auth'})(AuthForm)
 
-let mstp = (state) => ({
+let mstp = (state: AppStateType) => ({
     isAuthModalOpen: state.widgets.isAuthModalOpen,
 })
 
-export default connect(mstp, {
+export default connect<MapStateToPropsType, MapDispatchToPropsType, OwnPropsType, AppStateType>(mstp, {
     toggleAuthModal,
 })(AuthModal);

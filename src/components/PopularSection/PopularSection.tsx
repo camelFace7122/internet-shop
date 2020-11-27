@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import PopularItem from './PopularItem';
 import { connect } from 'react-redux';
+import { ClothesItemsType } from '../../types/types';
+import { AppStateType } from '../../redux/store';
 
 import './PopularSection.css';
 
+type PropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
+
+type MapStateToPropsType = {
+    women: ClothesItemsType
+}
+
+type MapDispatchToPropsType = {}
+
+type OwnPropsType = {}
+
 SwiperCore.use([Navigation]);
 
-const PopularSection = ({women}) => {
+const PopularSection: FC<PropsType> = ({women}) => {
 
     let popularMenItems = women.map(item => {
         return (
@@ -40,13 +52,13 @@ const PopularSection = ({women}) => {
     )
 }
 
-const mstp = (state) => {
+const mstp = (state: AppStateType) => {
     return {
         women: state.popular.women,
     }
 }
-const mdtp = (dispatch) => {
+const mdtp = (dispatch: any) => {
     return {}
 }
 
-export default connect(mstp, mdtp)(PopularSection);
+export default connect<MapStateToPropsType, MapDispatchToPropsType, OwnPropsType, AppStateType>(mstp, mdtp)(PopularSection);

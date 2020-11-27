@@ -1,7 +1,9 @@
 import initialState, { InitialStateType } from './widgets-state';
 import { OPEN_REGION_MODAL, OPEN_AUTH_MODAL, GIVE_FOCUS_STATE_OF_INPUT } from '../../../types/constants';
 
-const widgetsReducer = (state = initialState, action: any): InitialStateType => {
+type ActionsTypes = OpenAuthModalActionType | OpenRegionModalActionType | GiveFocusStateOfInputActionType
+
+const widgetsReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch(action.type) {
         case OPEN_REGION_MODAL:
         case OPEN_AUTH_MODAL:

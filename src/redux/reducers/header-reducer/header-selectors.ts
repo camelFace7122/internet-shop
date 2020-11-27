@@ -1,10 +1,11 @@
 import { createSelector } from "reselect";
+import { AppStateType } from "../../store";
 
-const getRegion = (state) => {
+const getRegion = (state: AppStateType): string => {
     return state.header.userRegion;
 }
 
-export const getUserRegion = createSelector(getRegion, userRegion => {
+export const getUserRegion = createSelector<AppStateType, string, string>(getRegion, userRegion => {
     let splittedUserRegion = userRegion.split('.');
     
     if (!splittedUserRegion[1]) {
@@ -14,7 +15,7 @@ export const getUserRegion = createSelector(getRegion, userRegion => {
     }
 })
 
-export const getRegionIsConfirmed = (state) => {
+export const getRegionIsConfirmed = (state: AppStateType): boolean => {
     return state.header.regionIsConfirmed;
 }
 

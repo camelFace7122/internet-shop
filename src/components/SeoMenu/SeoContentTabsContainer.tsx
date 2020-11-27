@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { SeoTabType } from '../../types/types';
 import TabPanel from '../common/MaterialUI/TabPanel';
 import SeoContentTabs from './SeoContentTabs';
 
-const SeoContentTabsContainer = ({value, index, tab}) => {
+type PropsType = {
+    value: number
+    index: number
+    tab: SeoTabType
+}
+
+const SeoContentTabsContainer: FC<PropsType> = ({value, index, tab}) => {
     let [subTabValue, setSubTabValue] = React.useState(0);
 
     return (

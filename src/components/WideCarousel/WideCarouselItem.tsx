@@ -1,7 +1,10 @@
-import React from 'react';
-import TeaserOverlay from './../common/TeaserOverlay/TeaserOverlay';
+import React, { FC } from 'react';
+import { WideCarouselItemType } from '../../types/types';
+import TeaserOverlay from '../common/TeaserOverlay/TeaserOverlay';
 
-const WideCarouselItem = ({picture}) => {
+type PropsType = WideCarouselItemType
+
+const WideCarouselItem: FC<PropsType> = ({picture}) => {
     return (
         <div className="wideCarousel__item">
             <a href="/" className="wideCarousel__image" style={{backgroundImage: `url(${picture})`}}>

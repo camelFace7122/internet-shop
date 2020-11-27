@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { ClothesItemType } from '../../types/types';
 
-const PopularItem = ({ isNew, isPremium, discount, price, producer, name, availableSizes, picture }) => {
+type PropsType = ClothesItemType
+
+const PopularItem: FC<PropsType> = ({ isNew, isPremium, discount, price, producer, name, availableSizes, picture }) => {
     let availableSizesLinks = availableSizes.map(size => {
         return (
             <a href="/" className="popular__item_size">{size}</a>
@@ -24,7 +27,7 @@ const PopularItem = ({ isNew, isPremium, discount, price, producer, name, availa
                                 <span className="popular__marks_premium">premium</span>
                             </a>}
                             {discount && <a className="popular__marks_item">
-                                <span className="popular__marks_discount">{'-' + parseInt(discount*100) + '%'}</span>
+                                <span className="popular__marks_discount">{'-' + Math.round(discount*100) + '%'}</span>
                             </a>}
                         </div>
                     </div>
@@ -35,7 +38,7 @@ const PopularItem = ({ isNew, isPremium, discount, price, producer, name, availa
                             discount ? 
                             <>
                                 <span className="popular__item_last_price">{price}</span>
-                                <span className="popular__item_current_price red-price">{price - parseInt(price*discount)} ₸</span> 
+                                <span className="popular__item_current_price red-price">{price - Math.round(price*discount)} ₸</span> 
                             </>
                             : <span className="popular__item_current_price">{price} ₸</span>
                         }

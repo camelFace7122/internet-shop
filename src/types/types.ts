@@ -52,6 +52,7 @@ export type MenuListItemType = {
 export type MenuListItemTabsType = Array<MenuListItemTabType>
 
 export type MenuListItemTabType = {
+    tabLabel?: string
     sections?: MenuListItemTabSectionsType
     banner?: TeaserItemType
     empty?: boolean

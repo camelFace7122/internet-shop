@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, FC} from 'react';
 import cn from 'classnames';
 import styles from './Search.module.css';
 
-const Search = (props) => {
+type PropsType = {}
+
+const Search: FC<PropsType> = (props) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const [searchInput, setSearchInput] = useState(null);
+    const [searchInput, setSearchInput] = useState<null | HTMLElement>(null);
 
     useEffect(() => {
         if (isExpanded && searchInput) {
@@ -12,16 +14,18 @@ const Search = (props) => {
         }
     }, [isExpanded])
 
-    const unexpandInput = (e) => {
-        if (!e.target.closest('.' + styles.search)) {
+    const unexpandInput = (e: MouseEvent) => {
+        const target = e.target as HTMLElement
+        if (!target.closest('.' + styles.search)) {
             setIsExpanded(false);
         }
     }
 
-    const onButtonClick = (e) => {
+    const onButtonClick = (e: React.MouseEvent) => {
+        const target = e.target as HTMLElement
+        let searchButton = target.closest('.' + styles.search__button) as HTMLElement;
+        let searchInput = searchButton && searchButton.previousElementSibling as HTMLElement;
         document.addEventListener('click', unexpandInput);
-        let searchButton = e.target.closest('.' + styles.search__button);
-        let searchInput = searchButton.previousSibling;
         if (searchButton) { 
             if (!isExpanded) {
                 setSearchInput(searchInput);

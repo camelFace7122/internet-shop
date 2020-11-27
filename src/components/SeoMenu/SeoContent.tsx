@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { SeoTabContentType } from '../../types/types';
 
-const SeoContent = ({links, config, benefits}) => {
+type PropsType = SeoTabContentType
+
+const SeoContent: FC<PropsType> = ({links, config, benefits}) => {
     let filterCount = 0;
     let cols = null;
     let benefitRows = null;
 
     if (!benefits) {
-        cols = config.map(i => {
+        cols = config && links && config.map(i => {
             let col = <div className="seoContent__box_col">
                 {links.filter( (item, index) => (index >= filterCount && index < (filterCount + i)) )
-                        .map(item => <a class="seoContent__box_link" href={item.link}>{item.linkName}</a>)}
+                        .map(item => <a className="seoContent__box_link" href={item.link}>{item.linkName}</a>)}
             </div>
             filterCount += i;
             return col;

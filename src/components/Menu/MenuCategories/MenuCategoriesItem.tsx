@@ -10,7 +10,7 @@ type PropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
 type MapStateToPropsType = {}
 
 type MapDispatchToPropsType = {
-    showDropdownList: (itemIsHovered: boolean, dropdownTabs: MenuListItemTabsType | null) => void
+    showDropdownList: (itemIsHovered: boolean, dropdownTabs?: MenuListItemTabsType | null) => void
 }
 
 type OwnPropsType = MenuListItemType & {

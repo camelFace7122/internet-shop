@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, FC, MouseEvent, useState } from 'react';
 import cn from 'classnames';
 import TeaserOverlay from '../../common/TeaserOverlay/TeaserOverlay';
 import TabPanel from '../../common/MaterialUI/TabPanel';
 import { Tabs, Tab } from '@material-ui/core';
+import { MenuListItemTabsType, TeaserItemType } from '../../../types/types';
 
-const MenuDropdownColumns = ({sectionColumns, banner}) => {
+type MenuDropdownColumnsPropsType = {
+    sectionColumns?: React.ReactNode
+    banner?: TeaserItemType
+}
+
+type MenuDropdownPropsType = {
+    tabs?: MenuListItemTabsType | null
+    showDropdownList: (itemIsHovered: boolean, dropdownTabs?: MenuListItemTabsType | null) => void
+    itemIsHovered: boolean
+}
+
+const MenuDropdownColumns: FC<MenuDropdownColumnsPropsType> = ({sectionColumns, banner}) => {
     return (
         <div className={'menuDropdown__cols'}>
             {sectionColumns}
@@ -36,20 +48,20 @@ const MenuDropdownColumns = ({sectionColumns, banner}) => {
     )
 }
 
-const MenuDropdown = ({tabs, showDropdownList, itemIsHovered}) => {
+const MenuDropdown: FC<MenuDropdownPropsType> = ({tabs, showDropdownList, itemIsHovered}) => {
     const [value, setValue] = useState(0);
 
-    const onHover = (e) => {
+    const onHover = (e: MouseEvent) => {
         if (itemIsHovered) {
             showDropdownList(true, tabs);
         }
     }
 
-    const onLeave = (e) => {
+    const onLeave = (e: MouseEvent) => {
         showDropdownList(false, null);
     }
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: ChangeEvent<Element | {}>, newValue: number) => {
         setValue(newValue);
     };
 
@@ -57,7 +69,7 @@ const MenuDropdown = ({tabs, showDropdownList, itemIsHovered}) => {
 
     if (tabs && !tabs[0].empty) {
         tabPanels = tabs.map((tab, index) => {
-            let sectionColumns = tab.sections.map(section => {
+            let sectionColumns = tab.sections && tab.sections.map(section => {
                 let currentIndex = 0;
                 return section.config.map((itemsCount, index) => {
                     
@@ -66,7 +78,7 @@ const MenuDropdown = ({tabs, showDropdownList, itemIsHovered}) => {
                     })
                     currentIndex += itemsCount;
 
-                    linkItems = linkItems.map((link) => <a href="#" role="button" className={'menuDropdown__section-item'}>{link}</a>) 
+                    let linkItemsElements = linkItems.map((link) => <a href="#" role="button" className={'menuDropdown__section-item'}>{link}</a>) 
                     
                     
                     return <div className={'menuDropdown__section-column'}>
@@ -75,7 +87,7 @@ const MenuDropdown = ({tabs, showDropdownList, itemIsHovered}) => {
                             section.heading && <div className={'menuDropdown__section-heading-continuation'}></div> 
                         }
                         {
-                            linkItems
+                            linkItemsElements
                         }
                     </div>
                 });
@@ -91,7 +103,7 @@ const MenuDropdown = ({tabs, showDropdownList, itemIsHovered}) => {
         })
     }
 
-    function a11yProps(index) {
+    function a11yProps(index: number) {
         return {
           id: `simple-tab-${index}`,
           'aria-controls': `simple-tabpanel-${index}`,

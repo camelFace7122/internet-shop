@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import TabPanel from './../common/MaterialUI/TabPanel'
+import TabPanel from '../common/MaterialUI/TabPanel'
 import SeoContent from './SeoContent';
+import { SeoTabCategoriesType, SeoTabContentType } from '../../types/types';
 
+type PropsType = {
+    categories?: SeoTabCategoriesType
+    content?: SeoTabContentType
+    value: number
+    setValue: React.Dispatch<React.SetStateAction<number>>
+}
 
-function a11yProps(index) {
+function a11yProps(index: number) {
     return {
         id: `vertical-tab-${index}`,
         'aria-controls': `vertical-tabpanel-${index}`,
@@ -25,10 +32,10 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function SeoContentTabs({categories, content, value, setValue}) {
+const SeoContentTabs: FC<PropsType> = ({categories, content, value, setValue}) => {
     const classes = useStyles();
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (event: ChangeEvent<Element | {}>, newValue: number) => {
         setValue(newValue);
     };
 

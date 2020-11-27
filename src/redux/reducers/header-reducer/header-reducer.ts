@@ -1,9 +1,10 @@
 import initialState, { InitialStateType } from './header-state';
-
 import {RESET_INPUT, SET_USER_GEO_DATA, CONFIRM_USER_REGION} from './../../../types/constants';
 import { GeoDataType } from '../../../types/types';
 
-const headerReducer = (state = initialState, action: any): InitialStateType => {
+type ActionsTypes = SetUserGeoDataActionType | ConfirmUserRegionActionType
+
+const headerReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch (action.type) {
         case SET_USER_GEO_DATA:
         case CONFIRM_USER_REGION: 

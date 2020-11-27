@@ -85,15 +85,15 @@ let FormControlContainer = connect<MapStateToPropsType, MapDispatchToPropsType, 
     giveFocusStateOfInput
 })(FormControl);
 
-export const EmailInput = (props: any) => {
+export const EmailInput: FC = (props: any) => {
     return <FormControlContainer tag='input' el='emailInput' helpers={{reset: true}} type='email' {...props} />
 }
 
-export const PasswordInput = (props: any) => {
+export const PasswordInput: FC = (props: any) => {
     return <FormControlContainer tag='input' el='passwordInput' helpers={{reset: true, passwordHider: true}} type='password' {...props} />
 }
 
-export const LocationInput = (props: any) => {
+export const LocationInput: FC = (props: any) => {
     const handleInputKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         let listItemsArray: NodeListOf<HTMLElement> = document.querySelectorAll('.region-modal__dropdown-list li')
         if (e.key == 'ArrowDown') {
@@ -107,7 +107,7 @@ export const LocationInput = (props: any) => {
     return <FormControlContainer tag='input' el='locationInput' type='text' {...props} autoComplete='off' handleInputKeyPress={handleInputKeyPress} />
 }
 
-export const createField = (placeholder: string, fieldName: string, validators: any, component: React.ReactElement, customClass?: string) => {
+export const createField = (placeholder: string, fieldName: string, validators: any, component: FC, customClass?: string) => {
     return (
         <Field name={fieldName} placeholder={placeholder} validate={[...validators]} component={component} className={customClass} />
     )
