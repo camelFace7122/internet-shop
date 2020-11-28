@@ -3,7 +3,7 @@ import { Tooltip, TooltipProps } from '@material-ui/core';
 
 import './CustomTooltip.css';
 
-type PropsType = PropsWithChildren<{
+type PropsType = {
     content: NonNullable<React.ReactNode>
     placement?:
     | 'bottom-end'
@@ -19,7 +19,7 @@ type PropsType = PropsWithChildren<{
     | 'top-start'
     | 'top'
     arrow?: boolean
-}>
+}
 
 const CustomTooltip: FC<PropsType> = ({children, content, placement, arrow}) => {
     return (

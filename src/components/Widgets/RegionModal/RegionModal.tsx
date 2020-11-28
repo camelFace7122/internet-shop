@@ -9,10 +9,10 @@ import {createField, LocationInput} from '../../common/FormsControls/FormControl
 import {getOnClickSavedLocation, haveAnyMatch} from '../../../utils/validators/validators';
 import cn from 'classnames';
 import { getIsRegionModalOpen, getLocationsMatchesKz, getPopularLocationsKz, getIsInputFocused } from '../../../redux/reducers/widgets-reducer/widgets-selectors';
-
-import './RegionModal.css';
 import { CountryLocationsType, GeoDataType } from '../../../types/types';
 import { AppStateType } from '../../../redux/store';
+
+import './RegionModal.css';
 
 type RegionModalPropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
 

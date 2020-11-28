@@ -2,12 +2,12 @@ import React, { FC, PropsWithChildren } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
-type PropsType = PropsWithChildren<{
+type PropsType = {
     value: number
     index: number
     idPrefix: string
     labelPrefix: string
-}>
+}
 
 const TabPanel: FC<PropsType> = ({ children, value, index, idPrefix, labelPrefix, ...other }) => {
 

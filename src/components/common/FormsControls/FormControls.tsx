@@ -24,8 +24,8 @@ type OwnPropsType = {
     helpers?: InputHelpersType
     type?: string
     autoComplete?: string
-    handleInputKeyPress: (e: number) => void 
-} & WrappedFieldProps
+    handleInputKeyPress?: (e: KeyboardEvent<HTMLInputElement>) => void 
+} & WrappedFieldProps   
 
 const FormControl: FC<PropsType> = ({input, meta, tag, el, helpers, type, resetInput, autoComplete, giveFocusStateOfInput, handleInputKeyPress, ...restProps}) => {
     const [passwordIsHidden, setPasswordIsHidden] = useState(true);
@@ -85,15 +85,15 @@ let FormControlContainer = connect<MapStateToPropsType, MapDispatchToPropsType, 
     giveFocusStateOfInput
 })(FormControl);
 
-export const EmailInput: FC = (props: any) => {
+export const EmailInput: FC<WrappedFieldProps> = (props) => {
     return <FormControlContainer tag='input' el='emailInput' helpers={{reset: true}} type='email' {...props} />
 }
 
-export const PasswordInput: FC = (props: any) => {
+export const PasswordInput: FC<WrappedFieldProps> = (props) => {
     return <FormControlContainer tag='input' el='passwordInput' helpers={{reset: true, passwordHider: true}} type='password' {...props} />
 }
 
-export const LocationInput: FC = (props: any) => {
+export const LocationInput: FC<WrappedFieldProps> = (props) => {
     const handleInputKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         let listItemsArray: NodeListOf<HTMLElement> = document.querySelectorAll('.region-modal__dropdown-list li')
         if (e.key == 'ArrowDown') {
@@ -107,7 +107,8 @@ export const LocationInput: FC = (props: any) => {
     return <FormControlContainer tag='input' el='locationInput' type='text' {...props} autoComplete='off' handleInputKeyPress={handleInputKeyPress} />
 }
 
-export const createField = (placeholder: string, fieldName: string, validators: any, component: FC, customClass?: string) => {
+export const createField = (placeholder: string, fieldName: string, validators: any, 
+                            component: FC<WrappedFieldProps> | React.Component<WrappedFieldProps> | string, customClass?: string) => {
     return (
         <Field name={fieldName} placeholder={placeholder} validate={[...validators]} component={component} className={customClass} />
     )

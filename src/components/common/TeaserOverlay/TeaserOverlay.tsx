@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren } from 'react';
 import './TeaserOverlay.css';
 
-type PropsType = PropsWithChildren<{text?: string}>
+type PropsType = {text?: string}
 
 const TeaserOverlay: FC<PropsType> = ({children, text = 'Купить'}) => {
     return (

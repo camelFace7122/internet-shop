@@ -4,11 +4,11 @@ import cn from 'classnames';
 
 import './CommonModal.css';
 
-type PropsType = PropsWithChildren<{
+type PropsType = {
     isModalOpen: boolean
     toggleModal: (isOpen: boolean) => void
     mainClass?: string
-}>
+}
 
 const CommonModal: FC<PropsType> = ({isModalOpen, toggleModal, mainClass, children}) => {
     const handleClick = (e: any) => {

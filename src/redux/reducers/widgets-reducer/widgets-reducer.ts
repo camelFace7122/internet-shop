@@ -1,7 +1,11 @@
 import initialState, { InitialStateType } from './widgets-state';
 import { OPEN_REGION_MODAL, OPEN_AUTH_MODAL, GIVE_FOCUS_STATE_OF_INPUT } from '../../../types/constants';
+import { ThunkAction } from 'redux-thunk';
+import { AppStateType } from '../../store';
+import { Dispatch } from 'react';
 
 type ActionsTypes = OpenAuthModalActionType | OpenRegionModalActionType | GiveFocusStateOfInputActionType
+type ThunkResult = ThunkAction<void, AppStateType, undefined, ActionsTypes>
 
 const widgetsReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch(action.type) {
@@ -73,7 +77,7 @@ export const giveFocusStateOfInput = (focusState?: boolean): GiveFocusStateOfInp
 
 // toggleModal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-const toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: any) => {
+const _toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: Dispatch<OpenAuthModalActionType | OpenRegionModalActionType>) => {
     if (isOpen) {
         document.documentElement.style.overflow = "hidden";
         dispatch(actionCreator(true));
@@ -83,12 +87,12 @@ const toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: any) =>
     }
 }
 
-export const toggleAuthModal = (isOpen: boolean) => (dispatch: any) => {
-    toggleModal(openAuthModal, isOpen, dispatch)
+export const toggleAuthModal = (isOpen: boolean): ThunkResult => (dispatch) => {
+    _toggleModal(openAuthModal, isOpen, dispatch)
 }
 
-export const toggleRegionModal = (isOpen: boolean) => (dispatch: any) => {
-    toggleModal(openRegionModal, isOpen, dispatch)
+export const toggleRegionModal = (isOpen: boolean): ThunkResult => (dispatch) => {
+    _toggleModal(openRegionModal, isOpen, dispatch)
 }
 
 export default widgetsReducer;
