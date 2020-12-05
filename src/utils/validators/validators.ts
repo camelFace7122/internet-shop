@@ -1,6 +1,6 @@
 import {geoLocations as gL} from '../../redux/database';
 
-type ValidatorType = (value: string) => string | undefined
+export type ValidatorType = (value: string) => string | undefined
 
 let onClickSavedLocation: string | null = null;
 

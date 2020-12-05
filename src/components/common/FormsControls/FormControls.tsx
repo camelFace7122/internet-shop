@@ -3,11 +3,13 @@ import {Field, WrappedFieldProps} from 'redux-form';
 import cn from 'classnames';
 import { connect } from 'react-redux';
 import {resetInput, ResetInputActionType} from '../../../redux/reducers/header-reducer/header-reducer';
-import {giveFocusStateOfInput, GiveFocusStateOfInputActionType} from '../../../redux/reducers/widgets-reducer/widgets-reducer';
+import {giveFocusStateOfInput} from '../../../redux/reducers/widgets-reducer/widgets-reducer';
 import { InputHelpersType } from '../../../types/types';
 import { AppStateType } from '../../../redux/store';
+import {ValidatorType} from './../../../utils/validators/validators'
 
 import './FormControls.css';
+import { Action } from 'redux';
 
 type PropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
 
@@ -15,7 +17,7 @@ type MapStateToPropsType = {}
     
 type MapDispatchToPropsType = {
     resetInput: (field: string) => ResetInputActionType
-    giveFocusStateOfInput: (focusState?: boolean) => GiveFocusStateOfInputActionType
+    giveFocusStateOfInput: (focusState?: boolean) => Action
 }
 
 type OwnPropsType = {
@@ -27,7 +29,8 @@ type OwnPropsType = {
     handleInputKeyPress?: (e: KeyboardEvent<HTMLInputElement>) => void 
 } & WrappedFieldProps   
 
-const FormControl: FC<PropsType> = ({input, meta, tag, el, helpers, type, resetInput, autoComplete, giveFocusStateOfInput, handleInputKeyPress, ...restProps}) => {
+const FormControl: FC<PropsType> = ({input, meta, tag, el, helpers, type, resetInput, 
+                                     autoComplete, giveFocusStateOfInput, handleInputKeyPress, ...restProps}) => {
     const [passwordIsHidden, setPasswordIsHidden] = useState(true);
     const [hasError, setHasError] = useState(false);
 
@@ -107,8 +110,8 @@ export const LocationInput: FC<WrappedFieldProps> = (props) => {
     return <FormControlContainer tag='input' el='locationInput' type='text' {...props} autoComplete='off' handleInputKeyPress={handleInputKeyPress} />
 }
 
-export const createField = (placeholder: string, fieldName: string, validators: any, 
-                            component: FC<WrappedFieldProps> | React.Component<WrappedFieldProps> | string, customClass?: string) => {
+export function createField<FormKeysType extends string>(placeholder: string | undefined, fieldName: FormKeysType, validators: Array<ValidatorType | undefined>, 
+                            component: FC<WrappedFieldProps> | React.Component<WrappedFieldProps> | string, customClass?: string) {
     return (
         <Field name={fieldName} placeholder={placeholder} validate={[...validators]} component={component} className={customClass} />
     )

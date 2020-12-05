@@ -5,7 +5,7 @@ let initialState = {
     isAuthModalOpen: false,
     isRegionModalOpen: false,
     geoLocations: {...gL} as GeoLocationsType,
-    isInputFocused: false,
+    isInputFocused: false as boolean | undefined,
 }
 
 export type InitialStateType = typeof initialState

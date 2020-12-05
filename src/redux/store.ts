@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware, compose, Reducer, AnyAction} from 'redux';
+import {createStore, combineReducers, applyMiddleware, compose, Reducer, AnyAction, Action} from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import mainBlockReducer from './reducers/mainBlock-reducer/mainBlock-reducer';
 import menuReducer from './reducers/menu-reducer/menu-reducer';
@@ -9,7 +9,8 @@ import wideCarouselReducer from './reducers/wideCarousel-reducer/wideCarousel-re
 import seoMenuReducer from './reducers/seoMenu-reducer/seoMenu-reducer';
 import footerReducer from './reducers/footer-reducer/footer-reducer';
 import headerReducer from './reducers/header-reducer/header-reducer';
-import {FormStateMap, reducer as formReducer} from 'redux-form';
+import {reducer as formReducer} from 'redux-form';
+import { ThunkAction } from 'redux-thunk';
 
 import {RESET_INPUT} from '../types/constants';
 import widgetsReducer from './reducers/widgets-reducer/widgets-reducer';
@@ -47,8 +48,13 @@ const rootReducer = combineReducers({
     })
 })
 
-type rootReducerType = typeof rootReducer
-export type AppStateType = ReturnType<rootReducerType>
+export type AppStateType = ReturnType<typeof rootReducer>
+
+export type InferActionsTypes<T> = T extends {[key: string]: (...args: any[]) => infer U} ? U : never
+
+export type GetStringKeys<T> = Extract<keyof T, string>
+
+export type BaseThunkType<A extends Action, R = void> = ThunkAction<R, AppStateType, undefined, A>
 
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

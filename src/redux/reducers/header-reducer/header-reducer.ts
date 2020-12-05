@@ -1,8 +1,9 @@
 import initialState, { InitialStateType } from './header-state';
 import {RESET_INPUT, SET_USER_GEO_DATA, CONFIRM_USER_REGION} from './../../../types/constants';
 import { GeoDataType } from '../../../types/types';
+import {InferActionsTypes} from './../../store';
 
-type ActionsTypes = SetUserGeoDataActionType | ConfirmUserRegionActionType
+type ActionsTypes = InferActionsTypes<typeof actions>
 
 const headerReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch (action.type) {
@@ -17,25 +18,23 @@ const headerReducer = (state = initialState, action: ActionsTypes): InitialState
     }
 }
 
-// setUserGeoData with types
-
-type SetUserGeoDataActionType = {
-    type: typeof SET_USER_GEO_DATA
-    payload: SetGeoUserDataActionPayloadType
-}
-
-type SetGeoUserDataActionPayloadType = {
-    userRegion: string
-}
-
-export const setUserGeoData = (geoData: GeoDataType): SetUserGeoDataActionType => {
-    return {
-        type: SET_USER_GEO_DATA,
-        payload: {userRegion: geoData.location},
+const actions = {
+    setUserGeoData: (geoData: GeoDataType) => {
+        return {
+            type: SET_USER_GEO_DATA,
+            payload: {userRegion: geoData.location},
+        } as const
+    },
+    confirmUserRegion: () => {
+        return {
+            type: CONFIRM_USER_REGION,
+            payload: {regionIsConfirmed: true},
+        } as const
     }
 }
 
-// resetInput with types
+export const setUserGeoData = actions.setUserGeoData 
+export const confirmUserRegion = actions.confirmUserRegion 
 
 export type ResetInputActionType = {
     type: typeof RESET_INPUT
@@ -46,24 +45,6 @@ export const resetInput = (field: string): ResetInputActionType => {
     return {
         type: RESET_INPUT,
         field,
-    }
-}
-
-// confirmUserRegion with types
-
-type ConfirmUserRegionPayloadType = {
-    regionIsConfirmed: boolean
-}
-
-export type ConfirmUserRegionActionType = {
-    type: typeof CONFIRM_USER_REGION
-    payload: ConfirmUserRegionPayloadType
-}
-
-export const confirmUserRegion = (): ConfirmUserRegionActionType => {
-    return {
-        type: CONFIRM_USER_REGION,
-        payload: {regionIsConfirmed: true},
     }
 }
 

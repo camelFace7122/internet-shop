@@ -5,9 +5,10 @@ import { createField, EmailInput, FormError, PasswordInput } from '../../common/
 import {toggleAuthModal} from '../../../redux/reducers/widgets-reducer/widgets-reducer';
 import {isEmail, minLength6, requiredEmail, requiredPassword} from '../../../utils/validators/validators';
 import CommonModal from '../../common/CommomModal/CommonModal';
+import { AuthDataType } from '../../../types/types';
+import { AppStateType, GetStringKeys } from '../../../redux/store';
 
 import './AuthModal.css';
-import { AppStateType } from '../../../redux/store';
 
 type AuthModalPropsType = MapStateToPropsType & MapDispatchToPropsType & OwnPropsType
 
@@ -21,7 +22,9 @@ type MapDispatchToPropsType = {
 
 type OwnPropsType = {}
 
-type AuthFormPropsType = InjectedFormProps
+type AuthFormPropsType = {}
+
+type AuthDataTypeKeys = GetStringKeys<AuthDataType>
 
 const AuthModal: FC<AuthModalPropsType> = ({isAuthModalOpen, toggleAuthModal}) => {
 
@@ -47,17 +50,17 @@ const AuthModal: FC<AuthModalPropsType> = ({isAuthModalOpen, toggleAuthModal}) =
 
 };
 
-const AuthForm: FC<AuthFormPropsType> = ({handleSubmit, error, valid}) => {
+const AuthForm: FC<InjectedFormProps<AuthDataType, AuthFormPropsType> & AuthFormPropsType> = ({handleSubmit, error, valid}) => {
 
     return <form onSubmit={handleSubmit}>
              <p className="common-modal-text">
                 <b>С помощью аккаунта Lamoda</b> <a href="/" className="common-modal-link">Создать аккаунт</a>
             </p>
             <div className="auth-modal__form-field">
-                {createField('Введите свой email', 'email', [requiredEmail, isEmail], EmailInput, 'auth-modal__input')}
+                {createField<AuthDataTypeKeys>('Введите свой email', 'email' ,[requiredEmail, isEmail], EmailInput, 'auth-modal__input')}
             </div>
             <div className="auth-modal__form-field">
-                {createField('Введите пароль', 'password', [requiredPassword, minLength6], PasswordInput, 'auth-modal__input')}
+                {createField<AuthDataTypeKeys>('Введите пароль', 'password', [requiredPassword, minLength6], PasswordInput, 'auth-modal__input')}
             </div>
             {error && <FormError error={error} />}
             <div className="auth-modal__form-submit">
@@ -67,7 +70,7 @@ const AuthForm: FC<AuthFormPropsType> = ({handleSubmit, error, valid}) => {
         </form>
 }
 
-const AuthReduxForm = reduxForm({form: 'auth'})(AuthForm)
+const AuthReduxForm = reduxForm<AuthDataType, AuthFormPropsType>({form: 'auth'})(AuthForm)
 
 let mstp = (state: AppStateType) => ({
     isAuthModalOpen: state.widgets.isAuthModalOpen,

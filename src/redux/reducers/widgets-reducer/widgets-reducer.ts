@@ -1,11 +1,14 @@
 import initialState, { InitialStateType } from './widgets-state';
 import { OPEN_REGION_MODAL, OPEN_AUTH_MODAL, GIVE_FOCUS_STATE_OF_INPUT } from '../../../types/constants';
-import { ThunkAction } from 'redux-thunk';
-import { AppStateType } from '../../store';
+import { BaseThunkType, InferActionsTypes } from '../../store';
 import { Dispatch } from 'react';
+import { Action } from 'redux';
+import { ActionTypes, FormAction } from 'redux-form';
 
-type ActionsTypes = OpenAuthModalActionType | OpenRegionModalActionType | GiveFocusStateOfInputActionType
-type ThunkResult = ThunkAction<void, AppStateType, undefined, ActionsTypes>
+type ActionsTypes = InferActionsTypes<typeof actions>
+type ThunkType = BaseThunkType<ActionsTypes | FormAction>
+
+
 
 const widgetsReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch(action.type) {
@@ -21,63 +24,30 @@ const widgetsReducer = (state = initialState, action: ActionsTypes): InitialStat
     }
 }
 
-// openAuthModal with types
-
-type OpenAuthModalActionType = {
-    type: typeof OPEN_AUTH_MODAL
-    payload: OpenAuthModalActionPayloadType
-}
-
-type OpenAuthModalActionPayloadType = {
-    isAuthModalOpen: boolean
-}
-
-const openAuthModal = (isOpen: boolean): OpenAuthModalActionType => {
-    return {
-        type: OPEN_AUTH_MODAL,
-        payload: { isAuthModalOpen: isOpen },
-    }
-}
-
-// openRegionModal with types
-
-type OpenRegionModalActionType = {
-    type: typeof OPEN_REGION_MODAL
-    payload: OpenRegionModalActionPayloadType
-}
-
-type OpenRegionModalActionPayloadType = {
-    isRegionModalOpen: boolean
-}
-
-const openRegionModal = (isOpen: boolean): OpenRegionModalActionType => {
-    return {
-        type: OPEN_REGION_MODAL,
-        payload: { isRegionModalOpen: isOpen }
-    }
-}
-
-// giveFocusStateOfInput with types 
-
-export type GiveFocusStateOfInputActionType = {
-    type: typeof GIVE_FOCUS_STATE_OF_INPUT
-    payload: GiveFocusStateOfInputActionPayloadType
-}
-
-type GiveFocusStateOfInputActionPayloadType = {
-    isInputFocused?: boolean
-}
-
-export const giveFocusStateOfInput = (focusState?: boolean): GiveFocusStateOfInputActionType => {
-    return {
-        type: GIVE_FOCUS_STATE_OF_INPUT,
-        payload: { isInputFocused: focusState},
+const actions = {
+    openAuthModal: (isOpen: boolean) => {
+        return {
+            type: OPEN_AUTH_MODAL,
+            payload: { isAuthModalOpen: isOpen },
+        }
+    },
+    openRegionModal: (isOpen: boolean) => {
+        return {
+            type: OPEN_REGION_MODAL,
+            payload: { isRegionModalOpen: isOpen }
+        }
+    },
+    giveFocusStateOfInput: (focusState?: boolean) => {
+        return {
+            type: GIVE_FOCUS_STATE_OF_INPUT,
+            payload: { isInputFocused: focusState},
+        }
     }
 }
 
 // toggleModal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-const _toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: Dispatch<OpenAuthModalActionType | OpenRegionModalActionType>) => {
+const _toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: Dispatch<ActionsTypes>) => {
     if (isOpen) {
         document.documentElement.style.overflow = "hidden";
         dispatch(actionCreator(true));
@@ -87,12 +57,14 @@ const _toggleModal = (actionCreator: Function, isOpen: boolean, dispatch: Dispat
     }
 }
 
-export const toggleAuthModal = (isOpen: boolean): ThunkResult => (dispatch) => {
-    _toggleModal(openAuthModal, isOpen, dispatch)
+export const toggleAuthModal = (isOpen: boolean): ThunkType | Action<ActionTypes> => (dispatch) => {
+    _toggleModal(actions.openAuthModal, isOpen, dispatch)
 }
 
-export const toggleRegionModal = (isOpen: boolean): ThunkResult => (dispatch) => {
-    _toggleModal(openRegionModal, isOpen, dispatch)
+export const toggleRegionModal = (isOpen: boolean): ThunkType | Action<ActionTypes> => (dispatch) => {
+    _toggleModal(actions.openRegionModal, isOpen, dispatch)
 }
+
+export const giveFocusStateOfInput = actions.giveFocusStateOfInput
 
 export default widgetsReducer;

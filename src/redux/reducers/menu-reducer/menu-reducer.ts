@@ -1,10 +1,9 @@
 import initialState, { InitialStateType } from './menu-state';
-
 import { SHOW_DROPDOWN_LIST } from '../../../types/constants';
-import { ReactNode } from 'react';
 import { MenuListItemTabsType } from '../../../types/types';
+import { InferActionsTypes } from '../../store';
 
-type ActionsTypes = ShowDropdownListActionType
+type ActionsTypes = InferActionsTypes<typeof actions>
 
 const menuReducer = (state = initialState, action: ActionsTypes): InitialStateType => {
     switch(action.type) {
@@ -18,27 +17,18 @@ const menuReducer = (state = initialState, action: ActionsTypes): InitialStateTy
     }
 }
 
-// showDropdownList with types
-
-type ShowDropdownListActionType = {
-    type: typeof SHOW_DROPDOWN_LIST
-    payload: ShowDropdownListActionPayloadType
-}
-
-type ShowDropdownListActionPayloadType = {
-    itemIsHovered: boolean,
-    dropdownTabs?: MenuListItemTabsType | null
-}
-
-export const showDropdownList = (itemIsHovered: boolean, dropdownTabs?: MenuListItemTabsType | null): ShowDropdownListActionType => {
-    return {
-        type: SHOW_DROPDOWN_LIST,
-        payload: {
-            itemIsHovered,
-            dropdownTabs
-        },
+const actions = {
+    showDropdownList: (itemIsHovered: boolean, dropdownTabs?: MenuListItemTabsType | null) => {
+        return {
+            type: SHOW_DROPDOWN_LIST,
+            payload: {
+                itemIsHovered,
+                dropdownTabs
+            },
+        }
     }
 }
 
+export const showDropdownList = actions.showDropdownList 
 
 export default menuReducer;

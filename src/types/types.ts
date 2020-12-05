@@ -19,6 +19,11 @@ export type GeoDataType = {
     location: string
 }
 
+export type AuthDataType = {
+    email: string
+    password: string
+}
+
 export type KnowMoreItemsType = Array<KnowMoreItemType>
 
 export type KnowMoreItemType = {

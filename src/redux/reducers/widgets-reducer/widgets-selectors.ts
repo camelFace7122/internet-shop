@@ -53,6 +53,6 @@ export const getPopularLocationsKz = createSelector<AppStateType, CountryLocatio
     });
 })
 
-export const getIsInputFocused = (state: AppStateType): boolean => {
+export const getIsInputFocused = (state: AppStateType): boolean | undefined => {
     return state.widgets.isInputFocused;
 }

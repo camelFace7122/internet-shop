@@ -1,6 +1,5 @@
 import React, { FC, KeyboardEvent, useEffect, useState } from 'react';
 import {connect} from 'react-redux';
-import {compose} from 'redux';
 import { reduxForm, formValueSelector, change, InjectedFormProps } from 'redux-form';
 import CommonModal from '../../common/CommomModal/CommonModal';
 import {toggleRegionModal} from '../../../redux/reducers/widgets-reducer/widgets-reducer';
@@ -10,7 +9,7 @@ import {getOnClickSavedLocation, haveAnyMatch} from '../../../utils/validators/v
 import cn from 'classnames';
 import { getIsRegionModalOpen, getLocationsMatchesKz, getPopularLocationsKz, getIsInputFocused } from '../../../redux/reducers/widgets-reducer/widgets-selectors';
 import { CountryLocationsType, GeoDataType } from '../../../types/types';
-import { AppStateType } from '../../../redux/store';
+import { AppStateType, GetStringKeys } from '../../../redux/store';
 
 import './RegionModal.css';
 
@@ -21,7 +20,7 @@ type MapStateToPropsType = {
     locationsMatchesKz?: CountryLocationsType | null
     popularLocations: CountryLocationsType
     locationFieldValue: string
-    isInputFocused: boolean
+    isInputFocused?: boolean 
 }
 
 type MapDispatchToPropsType = {
@@ -36,10 +35,12 @@ type RegionFormPropsType = {
     locationsMatchesKz?: CountryLocationsType | null
     popularLocations: CountryLocationsType
     locationFieldValue: string
-    isInputFocused: boolean
+    isInputFocused?: boolean
     changeValue: typeof change
     toggleRegionModal: (isOpen: boolean) => void
 }
+
+type GeoDataTypeKeys = GetStringKeys<GeoDataType>
 
 const RegionModal: FC<RegionModalPropsType> = ({isRegionModalOpen, toggleRegionModal, setUserGeoData,
                                                 locationsMatchesKz, popularLocations, locationFieldValue,
@@ -127,7 +128,7 @@ const RegionForm: FC<InjectedFormProps<GeoDataType, RegionFormPropsType> & Regio
     return (    
         <form onSubmit={handleSubmit} className='region-modal__form'>
             <div className='region-modal__geoselect'>
-                {createField('Введите название населенного пункта', 'location', [haveAnyMatch], LocationInput, 'region-modal__input')}
+                {createField<GeoDataTypeKeys>('Введите название населенного пункта', 'location', [haveAnyMatch], LocationInput, 'region-modal__input')}
                 <div className={cn('region-modal__dropdown', {['hide-dropdown']: !isInputFocused && locationNameWasSaved})}>
                     <ul className='region-modal__dropdown-list' onKeyDown={handleDropdownKeyPress}>
                         {(isInputFocused || !locationNameWasSaved || document.querySelector('.region-modal__dropdown-list li:focus')) && dropdownList}
